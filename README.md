@@ -1,10 +1,13 @@
 ERES PlayNAC “KERNEL” Codebase (v6.2)
 
+
+
+
 Empirical Realtime Education System × New Age Cybernetic Game Theory
 
-The PlayNAC "KERNEL" is the core engine powering:
+The PlayNAC “KERNEL” is the core orchestrator for:
 
-EarnedPath (EP): Merit‑based learning and progression
+EarnedPath (EP): Merit‑based learning progression
 
 GiantERP (GERP): Planetary resource planning
 
@@ -12,153 +15,155 @@ Bio‑Energetic Economy (BEE): EEG‑driven proof‑of‑work
 
 BERC: Bio‑Electric Ratings consensus
 
-Media Processor: Real‑time adaptive media styling
+Media Processor: Real‑time adaptive media transforms
 
-HFVN (Mandala-VERTECA): Hands‑free voice & gesture navigation
+HFVN (Mandala‑VERTECA): Hands‑free voice & gesture navigation
 
-Persistence & Ingestion: On‑disk chain storage, context, and external content sync
+Persistence & Ingestion: On‑disk blockchain storage, session context, and external content sync
 
-This README covers setup, structure, and usage of the PlayNAC v6.2 skeleton.
+📂 Repository Layout
 
-📂 Repository Structure
+PlayNAC-KERNEL/
+├── src/
+│   ├── kernel/             # Core engine (config, storage, kernel)
+│   ├── earnedpath/         # SimulationEngine, EPNode, MeritCalculator
+│   ├── gianterp/           # GiantERPClient and ResourceGrid models
+│   ├── bee/                # AuraScanner & BioPoW algorithms
+│   ├── berc/               # JASConsensus, MediaTask, JASLink
+│   ├── media/              # MediaProcessor and filters
+│   ├── nav/                # ASRClient, IntentParser, MandalaTranslator, HFVN
+│   └── utils/              # Helpers and ingestion stubs
+├── tests/                  # pytest suite for core modules
+├── .env.example            # Example environment variables
+├── CHANGELOG.md            # Version history
+├── CONTRIBUTING.md         # Contributing guidelines
+├── LICENSE                 # CC BY‑NC‑SA 4.0
+└── README.md               # This file
 
-src/
-├── kernel/
-│   ├── config.py           # ConfigManager loads .env files
-│   ├── models.py           # Block data classes
-│   ├── storage.py          # SQLite-backed Storage
-│   ├── context_manager.py  # Session state manager
-│   └── playnac_kernel.py   # Core orchestrator, mining loop
-├── earnedpath/             # Simulation engine, EP graph, merit calc
-├── gianterp/               # GiantERP client & models
-├── bee/                    # AuraScanner & BioPoW algorithms
-├── berc/                   # JASConsensus, MediaTask, JASLink
-├── media/                  # MediaProcessor and filter pipeline
-├── nav/                    # ASR/TTS, IntentParser, HFVN, MandalaTranslator
-└── utils/                  # Helpers: ingestion stubs, retry/cache
+⚙️ Setup & Installation
 
-tests/
-└── *.py                    # pytest suite for core components
+Prerequisites
 
-.env                        # Example environment variables
-CHANGELOG.md                # Version history
-LICENSE                     # CC BY‑NC‑SA 4.0
+Python 3.8 or higher
 
+pip
 
-⚙️ Installation
+(Optional) EEG hardware drivers for BioPoW
 
-Clone and enter:
+1. Clone the repository
 
 git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
 cd PlayNAC-KERNEL
 
-Create virtual environment:
+2. Create and activate a virtual environment
 
 python3 -m venv venv
-source venv/bin/activate
+source venv/bin/activate  # macOS/Linux
+venv\Scripts\activate   # Windows
 
-Install dependencies:
+3. Install dependencies
 
 pip install --upgrade pip
 pip install -r requirements.txt
 
-Configure environment:
-Copy .env.example to .env and set values:
+4. Configure environment variables
 
-WEB3_RPC_URL=https://your-node
-BEE_SECRET_KEY=your-secret
+Copy the example file and fill in your values:
+
+cp .env.example .env
+
+Edit .env:
+
+WEB3_RPC_URL=https://your-blockchain-node
+BEE_SECRET_KEY=your-secret-key
 DB_PATH=playnac.db
 
-Run tests:
+5. Run tests
 
 pytest tests/ --maxfail=1 --disable-warnings -q
 
 🚀 Quickstart Demo
 
-export DB_PATH=playnac.db
-python -m src.kernel.playnac_kernel
+Launch the demo kernel to mine a block:
 
-This will:
+export DB_PATH=playnac.db      # macOS/Linux
+set DB_PATH=playnac.db         # Windows
+python src/kernel/playnac_kernel.py
 
-Load persisted chain (if any).
+This script will:
+
+Load any existing blockchain from playnac.db.
 
 Submit a sample MediaTask.
 
-Mine a block (BioPoW + media processing).
+Mine one block (BioPoW + media processing).
 
-Persist and print block summary.
+Persist the block and display its details.
 
-🔧 Configuration
+🏗️ Usage
 
-Variable
+Import and use the kernel in your Python code:
 
-Description
+from src.kernel.playnac_kernel import PlayNACKernel
+from berc.models import MediaTask
+import time
 
-Example
+kernel = PlayNACKernel()
+kernel.submit_media_task(
+    MediaTask(
+        id='task1',
+        input_frame=my_frame_bytes,
+        task_type='style_transfer',
+        nonce=0,
+        timestamp=time.time()
+    )
+)
+kernel.run(iterations=5)
 
-WEB3_RPC_URL
+📐 Architecture
 
-Blockchain node for GCF interactions
+ConfigManager (src/kernel/config.py)
 
-https://gracechain-node.example
+Loads .env files and validates required keys.
 
-BEE_SECRET_KEY
+Storage (src/kernel/storage.py)
 
-Secret key for BioPoW entropy calibration
+SQLite-backed persistence for Block entries.
 
-abc123
+PlayNACKernel (src/kernel/playnac_kernel.py)
 
-DB_PATH
+Orchestrates BioPoW, media processing, block mining, persistence, and consensus linking.
 
-SQLite database file for block storage
+ContextManager (src/kernel/context_manager.py)
 
-/data/playnac.db
+Maintains session context for multi-turn Q&A (HowWay).
 
-📐 Architecture Overview
+Ingestion Stubs (src/utils/ingestion/)
 
-ConfigManager — loads multiple .env files, validates keys.
+Scaffold modules to sync content from ResearchGate, Medium, GitHub, etc.
 
-Storage — SQLite schema for blocks table; save_block & load_blocks API.
+Refer to docs/architecture/ for detailed class and sequence diagrams.
 
-PlayNACKernel —
+🛣️ Roadmap
 
-Initializes engines (BioPoW, SimulationEngine, MediaProcessor, JASConsensus)
+v6.x: Complete domain logic (EarnedPath, GERP, NBERS, CARE, GEO, SOMT).
 
-Loads persisted blocks and rebuilds chain
+v7.0: Real EEG integration, 3D/AR “Green Box” demo.
 
-Exposes submit_media_task() and mine_block() with adaptive difficulty
+v8.0: Microservices, Kubernetes Helm charts, production deployment.
 
-Persists new blocks and links consensus graph
+Contributions and feedback are welcome! Check issues.
 
-ContextManager — session‑scoped state for HowWay queries.
+🤝 Contributing
 
-Ingestion stubs — external content sync for ResearchGate, Medium, GitHub.
-
-Refer to docs/architecture/ for UML and sequence diagrams.
-
-🧪 Testing & CI
-
-pytest: Core unit/integration tests under tests/ (coverage ≥ 90%).
-
-GitHub Actions: runs lint (flake8), type‑check (mypy), pytest, bandit security scan.
-
-Add new tests as you extend modules:
-
-pytest tests/YourNewModule_test.py
-
-📝 Contributing
-
-Fork the repo → git checkout -b feature/YourFeature
-
-Implement with type hints, docstrings, and tests
-
-Submit PR to main branch
-
-CI will validate and merge after review
-
-Please follow our CONTRIBUTING.md guidelines.
+Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
 
 📜 License
 
-This code is released under the Creative Commons BY‑NC‑SA 4.0 license.
-See LICENSE for details.
+This project is licensed under the Creative Commons BY‑NC‑SA 4.0 license. See LICENSE for details.
+
+📞 Contact
+
+GitHub: https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL
+
+Discussions and support via GitHub Issues.
