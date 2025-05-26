@@ -183,5 +183,3 @@ This project is licensed under the MIT License. See the LICENSE file for full de
 Note: The MIT License is a widely-used open-source license and does not require any affiliation or agreement with the Massachusetts Institute of Technology. It simply offers permissive terms under which this software is distributed.
 
 For questions or feedback, contact: eresmaestro@gmail.com
-
-For questions or feedback, contact: eresmaestro@gmail.com
