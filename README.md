@@ -1,10 +1,8 @@
-PlayNAC-KERNEL
+ERES PlayNAC "KERNEL"
 
-ERES Institute for New Age Cybernetics
+New Age Cybernetic Game Theory Core Codebase
 
-The PlayNAC-KERNEL is the core codebase powering PlayNAC—our New Age Cybernetic Game Theory engine. It orchestrates realtime merit-tracking, EarnedPath progression, and GiantERP integration to simulate and incentivize personal, social, and planetary transformation.
-
-🚀 Table of Contents
+Table of Contents
 
 Overview
 
@@ -22,132 +20,146 @@ Contributing
 
 License & Contact
 
-📖 Overview
+Overview
 
-Purpose: Provide a modular, extensible kernel for PlayNAC that integrates:
+The ERES PlayNAC KERNEL is the modular foundation for the ERES Institute’s New Age Cybernetic ecosystem. It provides:
 
-EarnedPath (EP): Simulation-based merit progression.
+Data Ingestion pipelines for social media, email, and digital communications
 
-GiantERP (GERP): Earth-scale resource planning engine.
+Sociocratic Overlay Metadata Tapestry (SOMT) for domain and community classification
 
-Bio-Ecologic Ratings Codex (BERC): Real‑time ecological scoring.
+Empirical Realtime Education System (ERES) for adaptive learning modules and task orchestration
 
-Goals:
+Global Actuary Investor Authority (GAIA) for policy voting and domain intelligence
 
-Empower User-GROUPs with best/sound realtime media.
+Bio-Ecologic Ratings Codex (BERC) & Graceful Contribution Formula (GCF) for ecological and merit scoring
 
-Enable seamless vertical integration via VERTECA interface.
+National Bio-Ecologic Resource Score (NBERS) for country-level aggregation
 
-Support pilot deployments (e.g., Bentonville, AR) with biometric signature standards.
+Meritcoin & Gracechain tokenization on blockchain
 
-🏗️ Architecture
+Developers can extend and integrate each core module to customize PlayNAC deployments.
+
+Architecture
 
 playnac-kernel/
-├── src/                   # Core modules
-│   ├── earnedpath/        # EP engine
-│   ├── gerp/              # GERP interfaces
-│   ├── berc/              # Biological & ecological scoring
-│   ├── verteca/           # CyberRAVE vertical integration
-│   └── utils/             # Common utilities & adapters
-├── tests/                 # Unit and integration tests
-├── docs/                  # Design docs & diagrams
-├── examples/              # Sample configurations & scripts
-├── .github/               # CI workflows & issue templates
-└── README.md              # Project overview
+├── src/                   # Core application code
+│   ├── earnedpath/        # EP simulation and progression engine
+│   ├── gerp/              # GiantERP resource-planning interfaces
+│   ├── berc/              # Bio-Ecologic Ratings & GCF calculations
+│   ├── verteca/           # Vertical integration layer (CyberRAVE, GunnySack, Sale-builder)
+│   ├── somt/              # SOMT classification engine
+│   ├── ingest/            # Data ingestion and semantic field tagging
+│   └── tokens/            # Blockchain clients (Meritcoin & Gracechain)
+├── tests/                 # Unit and integration tests (Jest, pytest)
+├── docs/                  # Design docs, diagrams, semantic-fields.md
+│   └── overview.md        # High-level conceptual diagrams
+│   └── semantic-fields.md # Definitions of all 17 Semantic Fields
+├── examples/              # Sample configurations, scripts, and YAML templates
+├── .github/               # CI workflows, issue templates, and GitHub Actions
+├── .env.example           # Environment variable template
+├── package.json           # JavaScript dependencies and scripts
+├── requirements.txt       # Python dependencies
+└── README.md              # Project overview (this file)
 
-💾 Installation
+Installation
 
 Prerequisites:
 
-Node.js >= 18.x & npm
+Node.js ≥ 18.x & npm
 
-Python 3.10+ (for EP simulation scripts)
+Python ≥ 3.10 (for EarnedPath simulations)
 
-Docker (optional, for containerized deployments)
+Docker & Docker Compose (optional)
 
-# Clone the repo
+Clone the repository
+
 git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
 cd PlayNAC-KERNEL
 
-# Install dependencies
-npm install         # JavaScript modules
+Install dependencies
+
+npm install      # JavaScript modules
 pip install -r requirements.txt  # Python packages
 
-▶️ Usage
+Configure environment
 
-1. Build & Run Kernel
+cp .env.example .env
+# Edit .env with database URLs, API keys, and secrets
 
-npm run build       # Transpile TS modules
-npm start           # Launch the PlayNAC-KERNEL service
+Usage
 
-2. Execute EarnedPath Simulation
+Build & Run the Kernel
 
-python3 -m src.earnedpath.run --config examples/ep-config.yaml
+npm run build    # Transpile TypeScript modules
+npm start        # Launch the PlayNAC-KERNEL service
 
-3. Connect to GERP
+Execute EarnedPath Simulation
 
-Update src/gerp/config.json with your GERP endpoint, then:
+python3 -m src.earnedpath.run \
+  --config examples/ep-config.yaml
+
+Synchronize with GiantERP (GERP)
 
 npm run gerp:sync
 
-🧠 Core Concepts
+Run Tests
 
-PlayNAC: New Age Cybernetic Game Theory engine.
+npm test            # JavaScript tests (Jest)
+pytest tests/       # Python tests
 
-EarnedPath (EP): Nodes, merit, CPM/WBS/PERT workflows.
+Core Concepts
 
-GiantERP (GERP): Global Earth Resource Planner API.
+PlayNAC: New Age Cybernetic Game Theory engine for real-time merit and reward
 
-BERC: Bio‑Ecologic Ratings Codex for real‑time environmental scoring.
+EarnedPath (EP): Simulation-based progression using nodes, CPM/WBS/PERT workflows
 
-VERTECA: Vertical integration layer combining CyberRAVE, GunnySack, and sale‑builder interfaces.
+GiantERP (GERP): Global Earth Resource Planning API integration
 
-Refer to docs/overview.md for detailed conceptual diagrams.
+BERC: Bio-Ecologic Ratings Codex for ecological and social impact scoring
 
-🛠️ Development Guidelines
+GCF: Graceful Contribution Formula combining ecological and merit credits
 
-Coding Standards:
+VERTECA: Vertical interface layer (CyberRAVE, GunnySack, Sale-builder)
 
-Follow ESLint (JavaScript) and PEP8 (Python) rules.
+SOMT: Sociocratic Overlay Metadata Tapestry for domain-driven classification
 
-Semantic versioning for all modules (Major.Minor.Patch).
+NBERS: National Bio-Ecologic Resource Score (country-level index)
 
-Testing:
+Tokens: Meritcoin for knowledge contributions; Gracechain for ecological/ethical actions
 
-Write unit tests for every public function (Jest for JS, pytest for Python).
+Refer to docs/overview.md and docs/semantic-fields.md for detailed diagrams and full keyword definitions.
 
-Aim for ≥90% coverage.
+Development Guidelines
 
-Documentation:
+Coding Standards: ESLint for TypeScript/JavaScript; PEP8 for Python
 
-Update docs/ on interface or behavior changes.
+Versioning: Follow Semantic Versioning (MAJOR.MINOR.PATCH)
 
-Include design rationale in PR descriptions.
+Testing: Aim for ≥90% coverage; write unit tests for all public functions
 
-Continuous Integration:
+Documentation: Update docs/ on any interface or behavior change; include design rationale in PRs
 
-GitHub Actions run lint, test, and build on every PR.
+CI/CD: GitHub Actions run lint, test, and build on every pull request
 
-Merge only after passing status checks.
+Security: Store secrets in GitHub Secrets; never commit credentials in plaintext
 
-Security & Secrets:
+Contributing
 
-Store secrets in GitHub Secrets; never commit plaintext credentials.
+Contributions are welcome! Please:
 
-🤝 Contributing
+Fork the repository
 
-Fork the repository.
+Create a feature branch (git checkout -b feature/YourFeature)
 
-Create a feature branch (git checkout -b feature/YourFeature).
+Commit your changes (git commit -m "feat: ...")
 
-Commit your changes (git commit -m "feat: add ...").
+Push to your branch (git push origin feature/YourFeature)
 
-Push to your branch (git push origin feature/YourFeature).
+Open a Pull Request describing your changes
 
-Open a Pull Request describing your changes.
+See CONTRIBUTING.md for detailed guidelines.
 
-Please read CONTRIBUTING.md for more details.
+License & Contact
 
-📄 License & Contact
-
-This project is licensed under Creative Commons Attribution 4.0.For questions or feedback, contact: eresmaestro@gmail.com
+This project is licensed under the Creative Commons Attribution 4.0 license.For questions or feedback, contact: eresmaestro@gmail.com
