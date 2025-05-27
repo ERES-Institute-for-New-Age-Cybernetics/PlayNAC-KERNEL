@@ -1,185 +1,161 @@
-ERES PlayNAC "KERNEL"
+# PlayNAC “KERNEL” Codebase
 
-New Age Cybernetic Game Theory Core Codebase
+**Empirical Realtime Education System × Human‑Centered Skill Development Platform**
 
-Table of Contents
+## Overview
 
-Overview
+PlayNAC “KERNEL” is the orchestration layer for the ERES Institute’s New Age Cybernetics ecosystem. It powers multi‑modal ingestion, context‑aware Q\&A, time‑budget simulations (Vacationomics), and integrations with EarnedPath, GiantERP, BERC, and more.
 
-Architecture
+This repository provides:
 
-Installation
+* **Pluggable adapters** for content ingestion (ResearchGate, Medium, GitHub)
+* **Stateful context management** across user sessions
+* **Vacationomics engine** to simulate UBI vs. merit time‑budget tradeoffs
+* **Resilient error handling**, observability, and structured logging
+* **CI/CD pipelines** for quality gates, testing, and coverage
+* **Docker & Kubernetes** deployment scaffolding
 
-Usage
+## Key Features (v7.3)
 
-Core Concepts
+1. **Ingestion & Sync**
 
-Development Guidelines
+   * Real OAuth clients for ResearchGate, Medium, GitHub
+   * Rate‑limit handling, retry logic, response caching
+2. **Context Manager**
 
-Contributing
+   * Session/user‑scoped state store in `src/kernel/context_manager.py`
+   * Supports multi‑turn intent chaining and EP node linkage
+3. **Vacationomics Engine**
 
-License & Contact
+   * `src/vacationomics/simulation.py` for time‑budget and GCF tradeoff calculations
+   * Configurable α/β parameters for the Graceful Contribution Formula
+4. **Error Handling & Observability**
 
-Overview
+   * Domain‑specific exceptions in `src/utils/exceptions.py`
+   * Structured logging with request/session IDs (`src/utils/logger.py`)
+   * Prometheus‑compatible metrics stub (`src/utils/metrics.py`)
+5. **Tests & CI/CD**
 
-The ERES PlayNAC KERNEL is the modular foundation for the ERES Institute’s New Age Cybernetic ecosystem. It provides:
+   * Unit tests for ingestion & vacationomics modules
+   * GitHub Actions workflow: linting, type‑checking (mypy), pytest, security scan (Bandit), coverage badges
+6. **Type Safety & Documentation**
 
-Data Ingestion pipelines for social media, email, and digital communications
+   * Full Python type hints across modules
+   * Sphinx autodoc setup in `docs/` with Google‑style docstrings
+   * Architecture diagrams in `docs/architecture/`
+7. **Configuration & Deployment**
 
-Sociocratic Overlay Metadata Tapestry (SOMT) for domain and community classification
+   * Docker Compose for local orchestration
+   * Helm chart skeleton in `deploy/helm/` for Kubernetes
+8. **Real‑World Integrations**
 
-Empirical Realtime Education System (ERES) for adaptive learning modules and task orchestration
+   * AuraScanner adapters (Muse/OpenBCI) in `src/bee/`
+   * Three.js stub in `examples/greenbox/`
+   * ASR/TTS adapters (Google, Azure, Whisper) in `src/nav/`
+9. **Performance & Scalability**
 
-Global Actuary Investor Authority (GAIA) for policy voting and domain intelligence
+   * Async I/O with `asyncio` in ingestion and GERP modules
+   * Batching & caching via `aiocache`/Redis
+   * Benchmark scripts in `bench/` measuring simulation latency
 
-Bio-Ecologic Ratings Codex (BERC) & Graceful Contribution Formula (GCF) for ecological and merit scoring
+## Getting Started
 
-National Bio-Ecologic Resource Score (NBERS) for country-level aggregation
+### Prerequisites
 
-Meritcoin & Gracechain tokenization on blockchain
+* Python 3.10+
+* Docker & Docker Compose
+* (Optional) Access tokens for ResearchGate, Medium, GitHub
 
-Developers can extend and integrate each core module to customize PlayNAC deployments.
+### Installation
 
-Architecture
-
-playnac-kernel/
-├── src/                   # Core application code
-│   ├── earnedpath/        # EP simulation and progression engine
-│   ├── gerp/              # GiantERP resource-planning interfaces
-│   ├── berc/              # Bio-Ecologic Ratings & GCF calculations
-│   ├── verteca/           # Vertical integration layer (CyberRAVE, GunnySack, Sale-builder)
-│   ├── somt/              # SOMT classification engine
-│   ├── ingest/            # Data ingestion and semantic field tagging
-│   └── tokens/            # Blockchain clients (Meritcoin & Gracechain)
-├── tests/                 # Unit and integration tests (Jest, pytest)
-├── docs/                  # Design docs, diagrams, semantic-fields.md
-│   └── overview.md        # High-level conceptual diagrams
-│   └── semantic-fields.md # Definitions of all 17 Semantic Fields
-├── examples/              # Sample configurations, scripts, and YAML templates
-├── .github/               # CI workflows, issue templates, and GitHub Actions
-├── .env.example           # Environment variable template
-├── package.json           # JavaScript dependencies and scripts
-├── requirements.txt       # Python dependencies
-└── README.md              # Project overview (this file)
-
-Installation
-
-Prerequisites:
-
-Node.js ≥ 18.x & npm
-
-Python ≥ 3.10 (for EarnedPath simulations)
-
-Docker & Docker Compose (optional)
-
-Clone the repository
-
+```bash
 git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
 cd PlayNAC-KERNEL
+pip install -r requirements.txt
+```
 
-Install dependencies
+### Configuration
 
-npm install      # JavaScript modules
-pip install -r requirements.txt  # Python packages
+Copy `.env.example` to `.env` and fill in:
 
-Configure environment
+```ini
+RESEARCHGATE_TOKEN=\<your-token\>
+MEDIUM_TOKEN=\<your-token\>
+GITHUB_TOKEN=\<your-token\>
+REDIS_URL=redis://localhost:6379/0
+GCF_ALPHA=10
+GCF_BETA=0.1
+```
 
-cp .env.example .env
-# Edit .env with database URLs, API keys, and secrets
+### Running Locally
 
-Usage
+```bash
+docker-compose up --build
+```
 
-Build & Run the Kernel
+The Kernel API will be available at `http://localhost:8000`.
 
-npm run build    # Transpile TypeScript modules
-npm start        # Launch the PlayNAC-KERNEL service
+### Running Tests & Coverage
 
-Execute EarnedPath Simulation
+```bash
+pytest --cov=src
+```
 
-python3 -m src.earnedpath.run \
-  --config examples/ep-config.yaml
+## Architecture
 
-Synchronize with GiantERP (GERP)
+![Architecture Diagram](docs/architecture/playnac-kernel-overview.png)
 
-npm run gerp:sync
+## Directory Structure
 
-Run Tests
+```
+.
+├── src/
+│   ├── kernel/
+│   │   ├── config.py
+│   │   ├── context_manager.py
+│   │   └── playnac_kernel.py
+│   ├── utils/
+│   │   ├── exceptions.py
+│   │   ├── logger.py
+│   │   ├── metrics.py
+│   │   └── ingestion/
+│   │       ├── researchgate.py
+│   │       ├── medium.py
+│   │       └── github_sync.py
+│   ├── vacationomics/
+│   │   └── simulation.py
+│   ├── bee/
+│   ├── berc/
+│   ├── nav/
+│   └── ...
+├── tests/
+│   ├── ingestion/
+│   ├── vacationomics/
+│   └── kernel/
+├── docs/
+│   ├── architecture/
+│   └── api/
+├── deploy/
+│   ├── docker-compose.yml
+│   └── helm/
+├── bench/
+├── examples/
+│   └── greenbox/
+└── .github/
+    └── workflows/ci.yml
+```
 
-npm test            # JavaScript tests (Jest)
-pytest tests/       # Python tests
+## Contributing
 
-Core Concepts
+We welcome contributions! Please:
 
-PlayNAC: New Age Cybernetic Game Theory engine for real-time merit and reward
+1. Fork the repo
+2. Create a feature branch (`git checkout -b feature/foo`)
+3. Commit your changes (`git commit -m 'Add foo feature'`)
+4. Open a Pull Request
 
-EarnedPath (EP): Simulation-based progression using nodes, CPM/WBS/PERT workflows
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
-GiantERP (GERP): Global Earth Resource Planning API integration
+## License
 
-BERC: Bio-Ecologic Ratings Codex for ecological and social impact scoring
-
-GCF: Graceful Contribution Formula combining ecological and merit credits
-
-VERTECA: Vertical interface layer (CyberRAVE, GunnySack, Sale-builder)
-
-SOMT: Sociocratic Overlay Metadata Tapestry for domain-driven classification
-
-NBERS: National Bio-Ecologic Resource Score (country-level index)
-
-Tokens: Meritcoin for knowledge contributions; Gracechain for ecological/ethical actions
-
-Refer to docs/overview.md and docs/semantic-fields.md for detailed diagrams and full keyword definitions.
-
-Development Guidelines
-
-Coding Standards: ESLint for TypeScript/JavaScript; PEP8 for Python
-
-Versioning: Follow Semantic Versioning (MAJOR.MINOR.PATCH)
-
-Testing: Aim for ≥90% coverage; write unit tests for all public functions
-
-Documentation: Update docs/ on any interface or behavior change; include design rationale in PRs
-
-CI/CD: GitHub Actions run lint, test, and build on every pull request
-
-Security: Store secrets in GitHub Secrets; never commit credentials in plaintext
-
-Contributing
-
-Contributions are welcome! Please:
-
-Fork the repository
-
-Create a feature branch (git checkout -b feature/YourFeature)
-
-Commit your changes (git commit -m "feat: ...")
-
-Push to your branch (git push origin feature/YourFeature)
-
-Open a Pull Request describing your changes
-
-See CONTRIBUTING.md for detailed guidelines.
-
-License & Contact
-
-License
-
-Note: The MIT License is a widely-used open-source license and does not require any affiliation or agreement with the Massachusetts Institute of Technology. It simply offers permissive terms under which this software is distributed.
-
-MIT License
-
-Copyright (c) 2025 ERES Institute for New Age Cybernetics
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-License & Contact
-
-This project is licensed under the MIT License. See the LICENSE file for full details.
-
-Note: The MIT License is a widely-used open-source license and does not require any affiliation or agreement with the Massachusetts Institute of Technology. It simply offers permissive terms under which this software is distributed.
-
-For questions or feedback, contact: eresmaestro@gmail.com
+This project is licensed under the [MIT License](LICENSE).
