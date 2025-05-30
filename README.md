@@ -1,161 +1,127 @@
-# PlayNAC “KERNEL” Codebase
+[![Build Status](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/actions/workflows/ci.yml/badge.svg)](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/actions)
+[![Version](https://img.shields.io/badge/version-v7.4-blue.svg)](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/releases/tag/v7.4)
+[![License](https://img.shields.io/badge/license-BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
-**Empirical Realtime Education System × Human‑Centered Skill Development Platform**
+# ERES PlayNAC VERTECA “KERNEL” Codebase v7.4
 
-## Overview
+**Human Operating System (HUOS) 4D VR/AR Environment**
+*Part of the ERES Institute for New Age Cybernetics ecosystem.*
 
-PlayNAC “KERNEL” is the orchestration layer for the ERES Institute’s New Age Cybernetics ecosystem. It powers multi‑modal ingestion, context‑aware Q\&A, time‑budget simulations (Vacationomics), and integrations with EarnedPath, GiantERP, BERC, and more.
+Live repository: [https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL)
 
-This repository provides:
+---
 
-* **Pluggable adapters** for content ingestion (ResearchGate, Medium, GitHub)
-* **Stateful context management** across user sessions
-* **Vacationomics engine** to simulate UBI vs. merit time‑budget tradeoffs
-* **Resilient error handling**, observability, and structured logging
-* **CI/CD pipelines** for quality gates, testing, and coverage
-* **Docker & Kubernetes** deployment scaffolding
+## 🚀 Overview
 
-## Key Features (v7.3)
+PlayNAC “KERNEL” v7.4 extends the base framework with:
 
-1. **Ingestion & Sync**
+* **HUOS Module:** Core 4D VR/AR services for immersive experiences.
+* **VERTECA Integration:** Spatial gesture mapping and WebXR support.
+* **Green‑Box Simulator:** Enhanced rendering, spatial audio, dynamic zones.
+* **Multi‑User Orchestration:** Real‑time sessions with EP & GERP overlays.
+* **Containerized Deployment:** Docker Compose & Helm charts updated for VR.
+* **Updated Docs & Diagrams:** Sphinx autodocs, architecture diagrams for HUOS.
 
-   * Real OAuth clients for ResearchGate, Medium, GitHub
-   * Rate‑limit handling, retry logic, response caching
-2. **Context Manager**
+This release powers smart‑city user‑group dashboards in a VR/AR setting, enabling real‑time decision intelligence in a fully immersive environment.
 
-   * Session/user‑scoped state store in `src/kernel/context_manager.py`
-   * Supports multi‑turn intent chaining and EP node linkage
-3. **Vacationomics Engine**
+---
 
-   * `src/vacationomics/simulation.py` for time‑budget and GCF tradeoff calculations
-   * Configurable α/β parameters for the Graceful Contribution Formula
-4. **Error Handling & Observability**
+## 🎯 Features in v7.4
 
-   * Domain‑specific exceptions in `src/utils/exceptions.py`
-   * Structured logging with request/session IDs (`src/utils/logger.py`)
-   * Prometheus‑compatible metrics stub (`src/utils/metrics.py`)
-5. **Tests & CI/CD**
+1. **HUOS Module** (`src/huos/`)
 
-   * Unit tests for ingestion & vacationomics modules
-   * GitHub Actions workflow: linting, type‑checking (mypy), pytest, security scan (Bandit), coverage badges
-6. **Type Safety & Documentation**
+   * `HUOSKernel`: Lifecycle & command routing.
+   * `SpatialSceneManager`: Zone & scene definitions.
+   * `UserGroupCoordinator`: Session management for multiple users.
 
-   * Full Python type hints across modules
-   * Sphinx autodoc setup in `docs/` with Google‑style docstrings
-   * Architecture diagrams in `docs/architecture/`
-7. **Configuration & Deployment**
+2. **VERTECA VR/AR Adapters** (`src/nav/mandala_translator.py`)
 
-   * Docker Compose for local orchestration
-   * Helm chart skeleton in `deploy/helm/` for Kubernetes
-8. **Real‑World Integrations**
+   * Gesture‑to‑command translation.
+   * Unity/Three.js demo hooks in `examples/vr_ar/`.
 
-   * AuraScanner adapters (Muse/OpenBCI) in `src/bee/`
-   * Three.js stub in `examples/greenbox/`
-   * ASR/TTS adapters (Google, Azure, Whisper) in `src/nav/`
-9. **Performance & Scalability**
+3. **Green‑Box Simulator** (`src/huos/render/`)
 
-   * Async I/O with `asyncio` in ingestion and GERP modules
-   * Batching & caching via `aiocache`/Redis
-   * Benchmark scripts in `bench/` measuring simulation latency
+   * Rendering pipelines for WebXR & native engines.
+   * Spatial audio integration and dynamic highlights.
 
-## Getting Started
+4. **User‑Group Orchestration** (`src/kernel/context_manager.py`)
 
-### Prerequisites
+   * `UserGroupSession` abstraction for synchronized VR sessions.
+   * Real‑time EP node and GERP forecast overlays.
 
-* Python 3.10+
-* Docker & Docker Compose
-* (Optional) Access tokens for ResearchGate, Medium, GitHub
+5. **Deployment & Configuration**
 
-### Installation
+   * `deploy/docker-compose.yml`: Adds `huos-service` & WebSocket gateway.
+   * `deploy/helm/huos/`: Ingress rules & AR device API secrets.
 
-```bash
-git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
-cd PlayNAC-KERNEL
-pip install -r requirements.txt
-```
+6. **Documentation & Testing**
 
-### Configuration
+   * `docs/architecture/huos/`: Component & sequence diagrams.
+   * Sphinx autodoc entries for `src/huos/`.
+   * CI workflow updated to include `tests/huos/`.
 
-Copy `.env.example` to `.env` and fill in:
+---
 
-```ini
-RESEARCHGATE_TOKEN=\<your-token\>
-MEDIUM_TOKEN=\<your-token\>
-GITHUB_TOKEN=\<your-token\>
-REDIS_URL=redis://localhost:6379/0
-GCF_ALPHA=10
-GCF_BETA=0.1
-```
+## 📂 Directory Structure
 
-### Running Locally
-
-```bash
-docker-compose up --build
-```
-
-The Kernel API will be available at `http://localhost:8000`.
-
-### Running Tests & Coverage
-
-```bash
-pytest --cov=src
-```
-
-## Architecture
-
-![Architecture Diagram](docs/architecture/playnac-kernel-overview.png)
-
-## Directory Structure
-
-```
+```text
 .
 ├── src/
-│   ├── kernel/
-│   │   ├── config.py
-│   │   ├── context_manager.py
-│   │   └── playnac_kernel.py
-│   ├── utils/
-│   │   ├── exceptions.py
-│   │   ├── logger.py
-│   │   ├── metrics.py
-│   │   └── ingestion/
-│   │       ├── researchgate.py
-│   │       ├── medium.py
-│   │       └── github_sync.py
-│   ├── vacationomics/
-│   │   └── simulation.py
-│   ├── bee/
-│   ├── berc/
-│   ├── nav/
+│   ├── kernel/              # Core orchestrator & context manager
+│   ├── huos/                # HUOS 4D VR/AR module
+│   ├── nav/                 # Gesture translation adapters
+│   ├── vacationomics/       # Business logic engines
 │   └── ...
-├── tests/
-│   ├── ingestion/
-│   ├── vacationomics/
-│   └── kernel/
-├── docs/
-│   ├── architecture/
-│   └── api/
+├── examples/vr_ar/          # Green‑Box VR/AR demo project
+├── docs/architecture/huos/   # HUOS diagrams & docs
 ├── deploy/
-│   ├── docker-compose.yml
-│   └── helm/
-├── bench/
-├── examples/
-│   └── greenbox/
-└── .github/
-    └── workflows/ci.yml
+│   ├── docker-compose.yml   # VR container orchestration
+│   └── helm/huos/           # Helm charts for VR deployment
+├── tests/huos/              # HUOS unit and integration tests
+└── .github/workflows/ci.yml # CI pipeline including HUOS tests
 ```
 
-## Contributing
+---
 
-We welcome contributions! Please:
+## 🛠️ Getting Started
 
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/foo`)
-3. Commit your changes (`git commit -m 'Add foo feature'`)
-4. Open a Pull Request
+1. **Clone & Install**
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+   ```bash
+   git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
+   cd PlayNAC-KERNEL
+   python3 -m venv venv && source venv/bin/activate
+   pip install -r requirements.txt
+   ```
 
-## License
+2. **Configure Environment**
 
-This project is licensed under the [MIT License](LICENSE).
+   ```bash
+   cp .env.example .env
+   # Edit .env:
+   HUOS_API_KEY=your_vr_api_key
+   HUOS_WS_ENDPOINT=ws://localhost:8080/huos
+   ```
+
+3. **Launch Services & Demo**
+
+   ```bash
+   docker-compose up --build
+   python src/kernel/playnac_kernel.py --enable-huos
+   ```
+
+   * Open `examples/vr_ar/index.html` in a WebXR-compatible browser.
+
+---
+
+## 📖 Documentation & Contribution
+
+* **Read the Docs**: `make docs` to generate HTML API docs (including HUOS).
+* **Run Tests**: `pytest tests/huos/`
+* **Contribute**: Fork ➔ `feature/v7.4-huos` ➔ PR
+
+---
+
+## 📜 License
+
+This project is licensed under Creative Commons BY‑NC‑SA 4.0. See [LICENSE](LICENSE) for details.
