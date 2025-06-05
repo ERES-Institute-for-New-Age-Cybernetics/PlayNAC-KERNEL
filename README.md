@@ -1,4 +1,10 @@
+<!--
+Last Updated: June 5, 2025
+-->
+
 # ERES PlayNAC KERNEL
+
+*Last Updated: June 5, 2025*
 
 Core implementation of the PlayNAC “Kernel”: a New Age Cybernetic Game Theory framework for real-time, bio-ecologic civic engagement.
 
@@ -579,6 +585,3 @@ ERES Institute. (2025). PlayNAC Kernel Documentation.
 ERES Institute. (2025). API Reference.
 
 For a complete bibliography, see docs/References.bib.
-
-Copy
-Edit
