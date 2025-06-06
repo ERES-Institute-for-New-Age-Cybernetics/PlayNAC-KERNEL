@@ -87,7 +87,7 @@ Key objectives:
 
 - **BERC**  
   - *Bio-Electric Ratings Codex*  
-  - A structured data repository tracking ecological, energy, and resource metrics at planetary, regional, and community scales. Feeds real-time environmental data into PlayNAC simulations for scenario planning (e.g., water security, energy balance), indexes resource transactions on blockchain, and exposes APIs for governance modules.
+  - A structured data repository tracking ecological, energy, and resource metrics at planetary, regional, and community scales. Feeds real-time environmental data into PlayNAC simulations for scenario planning (e.g., water security, energy balance), indexes resource transactions on blockchain, and provides APIs for governance modules.
 
 - **Giant Earth Resource Data (BERC System)**  
   - The underlying data infrastructure and API layer aggregating, indexing, and exposing ecological and resource-impact metrics for consumption by PlayNAC and related modules.
@@ -125,6 +125,18 @@ Key objectives:
 - **GSSG**  
   - *Green Solar-Sand Glass*  
   - Environmental oracle input tracking transparent solar-harvesting infrastructure metrics. Used by PlayNAC to adjust resource-allocation algorithms, model energy balance scenarios, and forecast ecological impact under varying adoption rates.
+
+- **THOW**  
+  - *Tiny Homes On Wheels*  
+  - A modular, mobile housing concept tracked by PlayNAC for sustainable living simulations. THOW units serve as deployment testbeds for off-grid resource management and community resilience modeling.
+
+- **FDRV**  
+  - *Fly & Dive RV (Spaceships Futures)*  
+  - Futuristic mobile platforms (combining terrestrial and aerial/space capabilities) integrated into PlayNAC to simulate advanced mobility solutions. FDRV modules model logistics, energy consumption, and environmental footprints for next-generation transport.
+
+- **HFVN**  
+  - *Hands-Free Voice Navigation*  
+  - Voice-controlled interface layer integrated with SECUIR. Enables users to interact with PlayNAC commands and dashboards without manual input, enhancing accessibility and real-time responsiveness in field deployments.
 
 - **SLA**  
   - *Service Level Agreement*  
@@ -188,21 +200,29 @@ The ERES PlayNAC KERNEL was conceived to meet these requirements: a modular, ext
    - Manages consent-based voting, quorum adjustments (DQAM), and conflict-resolution oracles (GAIA).  
    - Organizes participants into User-GROUPs with Enneagram-driven team composition.
 
-5. **Hands-Off Voice Navigation (HFVN) Integration**  
-   - (Experimental) Voice-controlled interface for PlayNAC events via SECUIR.  
-   - Enables accessibility in low-vision or hands-busy scenarios.
+5. **Tiny Homes On Wheels (THOW)**  
+   - Simulates modular, mobile housing for sustainable living and resilience testing.  
+   - Models off-grid resource management and community impact metrics.
 
-6. **Modular Microservices**  
+6. **Fly & Dive RV (Spaceships Futures) (FDRV)**  
+   - Models advanced mobility platforms combining terrestrial, aerial, and space capabilities.  
+   - Simulates logistics, energy footprints, and environmental trade-offs for futuristic transport.
+
+7. **Hands-Free Voice Navigation (HFVN)**  
+   - Voice-controlled interface for PlayNAC commands via SECUIR.  
+   - Enhances accessibility and allows real-time field interactions without manual input.
+
+8. **Modular Microservices**  
    - Dockerized components (PlayNAC API, SECUIR, EarnedPath, BERC, GAIA).  
    - Asynchronous event bus (Akka Streams) for scalable, fault-tolerant operations.
 
-7. **Comprehensive Monitoring**  
+9. **Comprehensive Monitoring**  
    - Prometheus metrics exporter and Grafana dashboards.  
    - Alerts for SLA violations, EarnedPath sync errors, and environmental threshold breaches.
 
-8. **Developer Tooling**  
-   - `pnctl` CLI for quest management, SLA simulations, and User-GROUP analytics.  
-   - REST/gRPC interfaces for integration with external dashboards and oracles.
+10. **Developer Tooling**  
+    - `pnctl` CLI for quest management, SLA simulations, and User-GROUP analytics.  
+    - REST/gRPC interfaces for integration with external dashboards and oracles.
 
 ---
 
@@ -279,7 +299,7 @@ Edit
   - Smart-contract wrappers for EarnedPath and SLA enforcement.
 
 - **`src/fs_ep/`**  
-  - Fourier-Schumann Earth Predictive modules for seismic forecasting and geospatial risk modeling.
+  - Fourier-Schumann Earth Predictive modules for seismic event forecasting and geospatial risk modeling.
 
 - **`src/utils/`**  
   - Shared helper functions, configuration loaders, and common library code.
@@ -376,10 +396,17 @@ Edit
 server:
   port: 8080
 
+database:
+  url: jdbc:postgresql://localhost:5432/playnac
+  user: playnac_user
+  password: change_me
+
 earnedpath:
   endpoint: http://localhost:9001/earnedpath
+
 berc:
   endpoint: http://localhost:9002/berc
+
 gaia:
   sla_registry: http://localhost:9003/gaia
 
@@ -688,7 +715,8 @@ Contributing
 We welcome contributions from the community! Please follow these steps:
 
 Fork the repository
-2. Create a feature branch:
+
+Create a feature branch:
 
 bash
 Copy
@@ -741,13 +769,4 @@ ERES Institute GitHub Organization
 ERES on Medium
 
 ERES ResearchGate Profile
-
-Copy
-Edit
-
-
-
-
-
-
 
