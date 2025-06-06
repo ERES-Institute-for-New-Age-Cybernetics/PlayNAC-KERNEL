@@ -1,700 +1,460 @@
-<!-- Last Updated: June 6, 2025 -->
-
 # ERES PlayNAC KERNEL
 
-**Core implementation of the PlayNAC “Kernel”: a New Age Cybernetic Game Theory framework for real-time, bio-ecologic civic engagement.**
+**A Cybernetic Game-Theory Engine for New Age Governance and Sustainability**
 
 ---
 
 ## Table of Contents
 
-1. [Project Overview](#project-overview)  
-2. [Glossary of Acronyms](#glossary-of-acronyms)  
-3. [Background & Motivation](#background--motivation)  
-4. [Key Features](#key-features)  
-5. [Architecture & Directory Structure](#architecture--directory-structure)  
-6. [Getting Started](#getting-started)  
-   - [Prerequisites](#prerequisites)  
-   - [Installation](#installation)  
-   - [Environment Configuration](#environment-configuration)  
-   - [Running the Kernel](#running-the-kernel)  
-7. [Usage & Workflow](#usage--workflow)  
-   - [Core Commands](#core-commands)  
-   - [Extending the Kernel](#extending-the-kernel)  
-8. [Modules & Components](#modules--components)  
-   - [Core Engine (`src/core`)](#core-engine-srccore)  
-   - [Semantic Mapping (`src/semantic`)](#semantic-mapping-srcsemantic)  
-   - [HUOS Integration (`src/huos`)](#huos-integration-srchuos)  
-   - [VERTECA Simulator (`src/verteca`)](#verteca-simulator-srcverteca)  
-   - [BERC Scoring (`src/berc`)](#berc-scoring-srcberc)  
-   - [Blockchain Connectors (`src/blockchain`)](#blockchain-connectors-srcblockchain)  
-   - [FS-EP Predictive Modules (`src/fs_ep`)](#fs-ep-predictive-modules-srcfs_ep)  
-   - [Utility & Helpers (`src/utils`)](#utility--helpers-srcutils)  
-9. [Configuration Files](#configuration-files)  
-10. [Testing](#testing)  
-11. [Contributing](#contributing)  
-12. [License](#license)  
-13. [Contact](#contact)  
-14. [Acknowledgments & References](#acknowledgments--references)
+1. [Introduction](#introduction)  
+2. [Key Concepts](#key-concepts)  
+   - [VERTECA (Virtual World)](#verteca-virtual-world)  
+   - [PlayNAC (HUOS)](#playnac-huos)  
+   - [SECUIR (App-Parent)](#secuir-app-parent)  
+   - [EarnedPath (Social Justice)](#earnedpath-social-justice)  
+   - [BERC (Giant Earth Resource Data)](#berc-giant-earth-resource-data)  
+   - [User-GROUP (GAIA Smart-City & Enneagram)](#user-group-gaia-smart-city--enneagram)  
+3. [Architecture Overview](#architecture-overview)  
+4. [Repository Layout](#repository-layout)  
+5. [Installation & Setup](#installation--setup)  
+6. [Usage](#usage)  
+7. [Extending the Kernel](#extending-the-kernel)  
+8. [Contributing](#contributing)  
+9. [License](#license)  
+10. [Contact & Support](#contact--support)  
 
 ---
 
-## Project Overview
+## Introduction
 
-The **ERES PlayNAC KERNEL** is the foundational codebase for the PlayNAC framework—an AI-driven, game-theoretic engine designed to **gamify civic engagement**, facilitate **real-time resource allocation**, and embed **bio-ecologic metrics** into decision-making loops. Its goal is to enable communities, municipalities, and institutions to negotiate complex policy decisions (energy, water, land use, emergency response) within a **Sociocratic Overlay Metadata Tapestry (SOMT)**, integrating classical and quantum optimization methods.
+The **ERES PlayNAC KERNEL** is the foundational codebase for implementing New Age Cybernetic Game Theory (PlayNAC) under the ERES Institute umbrella. This “KERNEL” provides the minimal, core infrastructure to model, simulate, and manage a sociocratic, bio-ecologic governance framework. It is designed to integrate multiple subsystems—ranging from virtual world environments to resource data codices—into a cohesive, extensible architecture that supports:
 
----
+- **Adaptive, real-time decision-making** through simulated “players” and governance heuristics  
+- **Social justice enforcement** via tokenized EarnedPath mechanisms  
+- **Bio-ecologic resource tracking** using the Bio-Electric Ratings Codex (BERC)  
+- **Community and Group governance overlays** under the GAIA Smart-City framework  
 
-## Glossary of Acronyms
-
-- **ERES** ‒ Empirical Realtime Education System (ERES Institute)  
-- **PlayNAC** ‒ New Age Cybernetic Game Theory framework  
-- **EP** ‒ EarnedPath (token-based social justice mechanism)  
-- **GERP** ‒ Giant Earth Resource Planner (global resource allocation system)  
-- **BERC** ‒ Bio-Ecologic Ratings Codex (ecological & social impact score)  
-- **HUOS** ‒ Human-Oriented Operating System (voice-enabled UI/UX layer)  
-- **VERTECA** ‒ Virtual Environment for Real-Time Engagement, Collaboration, & Analysis (simulation platform)  
-- **FS-EP** ‒ Fourier-Schumann Earth Prediction (seismic and environmental forecasting module)  
-- **SOMT** ‒ Sociocratic Overlay Metadata Tapestry (semantic knowledge graph)  
-- **GSSG** ‒ Green Solar-Sand Glass (distributed energy + sensor array)  
-- **HFVN** ‒ Hands-Free Voice Navigation (voice interface layer)  
-- **SLAs** ‒ Service Level Agreements (dynamic, condition-driven contracts)  
-- **COI** ‒ Community of Interest (stakeholder group)  
-- **UBIMIA** ‒ Universal Basic Income + Merit × Investment(s) ± Awards  
-- **CARE** ‒ Christ About Real Energy (ethical energy-governance principle)
+This README outlines the conceptual foundations, directory structure, setup instructions, and guidelines for extending the kernel to support research, experimentation, or pilot deployments of New Age Cybernetic systems.
 
 ---
 
-## Background & Motivation
+## Key Concepts
 
-Traditional AI platforms often operate in isolation, optimizing narrow objectives (e.g., cost minimization) without holistic consideration of ecological, societal, and long-term impacts. The **PlayNAC KERNEL** was conceived to address:
+Below are the core conceptual building blocks of the PlayNAC KERNEL. Each module encapsulates one layer of the overall cybernetic framework:
 
-- **Multi-Stakeholder Complexity**: Cities and regions juggle energy, water, land-use planning, emergency response, and ecological preservation. Conventional rule-based or purely data-driven systems struggle to negotiate competing priorities.
+### VERTECA (Virtual World)
 
-- **Geospatial Dynamics & Earth Change**: Rapid environmental shifts (sea-level rise, extreme weather) create evolving risk zones. Decision engines must anchor conflict resolution in precise **longitude** and **latitude** to reallocate resources, adjust policies, and resolve property disputes as boundaries shift.
+- **Definition**: A 4D (three spatial + simulation-time) virtual environment that hosts PlayNAC simulations.  
+- **Role**: Serves as the runtime container for all active agents, data feeds, and governance interactions.  
+- **Features**:  
+  - Multi-user spatial virtualization  
+  - Real-time state propagation  
+  - Plug-in points for physics, visualization, and blockchain-anchored logging  
 
-- **Sociocratic Governance & Transparency**: PlayNAC emphasizes participatory decision-making. By weaving every data input into a **live semantic tapestry (SOMT)**, communities co-author policy outcomes, build trust, and minimize litigation.
+### PlayNAC (HUOS)
 
-- **Quantum-Accelerated Optimization**: Combinatorial negotiations—e.g., relocating thousands of parcels in a floodplain—require exploring exponentially large solution spaces. Hybrid classical-quantum algorithms accelerate convergence on balanced, **BERC-informed** outcomes.
+- **Definition**: “Human-Unified Operating System” layer within the kernel that implements game-theory constructs, decision heuristics, and agent-based models.  
+- **Role**: Encodes the rules, payoff structures, and simulation loops for cybernetic governance scenarios.  
+- **Features**:  
+  - Agent classes implementing sociocratic decision flows  
+  - Rule engines for “win states” in resource allocation, conflict resolution, and collaboration  
+  - Support for dynamic parameter tuning (e.g., merit thresholds, voting weights)  
 
-- **Resilience & Distributed Infrastructure**: Embedding **GSSG** panels as both energy generators and sensor nodes fosters a self-healing grid. If one node fails, others reroute power/data, ensuring continuity of essential services during crises.
+### SECUIR (App-Parent)
 
-By uniting these elements, PlayNAC KERNEL becomes more than software: it’s a living, adaptive platform for **Civilization II**—where technology, ecology, and human agency coalesce.
+- **Definition**: The security and user-interface layer—including authentication, authorization, and audit trails—that sits “above” PlayNAC on the application tree.  
+- **Role**:  
+  - Ensures cryptographic identity management (FAVORS: Fingerprint, Aura, Voice, Odor, Retina, Signature)  
+  - Mediates all read/write operations to EarnedPath tokens and BERC data  
+  - Enforces policy rules defined by GAIA overlays (e.g., group membership, role assignments)  
+
+### EarnedPath (Social Justice)
+
+- **Definition**: A tokenized social-justice mechanism that tracks individual “merit credits” and “liability credits” over time.  
+- **Role**:  
+  - Governs eligibility for benefits (e.g., UBI, Vacationomics credits) based on quantifiable contributions  
+  - Models non-punitive remediation: infractions reduce future token inflows, but do not block participation outright  
+  - Interfaces seamlessly with PlayNAC rules (e.g., influence weight in voting correlates with EarnedPath balance)  
+
+### BERC (Giant Earth Resource Data)
+
+- **Definition**: “Bio-Electric Ratings Codex,” a structured data repository tracking ecological, energy, and resource metrics at planetary, regional, and community scales.  
+- **Role**:  
+  - Feeds real-time environmental data into PlayNAC simulations for scenario planning (e.g., water security, energy balance)  
+  - Stores and indexes all resource transactions (e.g., carbon credits, water usage tokens) anchored on a blockchain  
+  - Provides APIs for governance modules to query environmental impact scores  
+
+### User-GROUP (GAIA Smart-City & Enneagram)
+
+- **Definition**: The sociocratic “overlay” representing clustered participants—individuals, cooperatives, or municipalities—organized by interest, capacity, and governance roles.  
+- **Role**:  
+  - Defines voting blocs, consensus-building subcommittees, and feedback loops under the GAIA framework  
+  - Incorporates Enneagram-driven personality analytics to optimize collaboration dynamics  
+  - Maps to PlayNAC agent sets for simulation (e.g., “community A,” “cooperative B,” “civic council C”)  
 
 ---
 
-## Key Features
+## Architecture Overview
 
-1. **Sociocratic Overlay Metadata Tapestry (SOMT)**  
-   - Live, ontological knowledge graph indexing all nodes (property parcels, energy assets, hazard zones) by **latitude/longitude**.  
-   - Dynamic versioning and provenance for auditability.  
-   - Role-based views for each COI (e.g., LandManagement, EnergyResilience).
+```text
+┌───────────────────────────────────────────────────────────┐
+│                        VERTECA                           │
+│   (4D Virtual World: runtime container & event bus)      │
+│    └───────────────────────────────────────────────┐      │
+│                                                    ▼      │
+│                   PlayNAC (HUOS) Module                   │
+│   (Game-theory engine, agent heuristics, rule engines)    │
+│    └───────────────────────────────────────────────┐      │
+│                                                    ▼      │
+│                   SECUIR (App-Parent) Module               │
+│   (Authentication, authorization, audit, policy enforcement)│
+│    └───────────────────────────────────────────────┐      │
+│                                                    ▼      │
+│    ┌───────────────┐       ┌──────────────────────┐         │
+│    │ EarnedPath    │       │ BERC (Resource Data) │         │
+│    │ (Merit Tokens)│       │ (Environment Metrics)│         │
+│    └───────────────┘       └──────────────────────┘         │
+│               ▼                    ▼                       │
+│    ┌───────────────────────────────────────────────┐      │
+│    │            User-GROUP (GAIA & Enneagram)      │      │
+│    │(Sociocratic overlay, voting blocs, feedback)  │      │
+│    └───────────────────────────────────────────────┘      │
+└───────────────────────────────────────────────────────────┘
+VERTECA sits at the top as the “world” layer. All modules register as subservices.
 
-2. **PlayNAC Multi-Agent Game Engine**  
-   - Agents representing COIs negotiate resource allocation, policy adjustments, and crisis responses.  
-   - Classical simulation transitions to **quantum optimization** (QAOA, quantum annealing) as problem scale increases.  
-   - Reward functions combine BERC scores, short-term service metrics, and long-term intergenerational equity (1000-Year Future Map).
+PlayNAC implements the core simulation loop and drives agent interactions based on rule sets.
 
-3. **Geospatial Precision & Conflict Resolution**  
-   - Cadastral records anchored with exact **longitude/latitude** polygons.  
-   - Real-time hazard overlays (flood, seismic, wildfire) integrated via satellite and in-situ sensors.  
-   - Automated ontological conflict detection triggers PlayNAC negotiations to resolve property, zoning, or resource disputes.
+SECUIR mediates access to EarnedPath and BERC, enforcing identity and policy.
 
-4. **GSSG (Green Solar-Sand Glass) Mesh Network**  
-   - Bifacial, nanocoated perovskite panels achieve ≥25% efficiency under harsh conditions.  
-   - Integrated MEMS sensors (temperature, irradiance, structural strain) feed environmental telemetry into SOMT.  
-   - Modular shelters and rooftop installations deliver energy, communications (Li-Fi), and refuge during emergencies.
+EarnedPath and BERC operate as sibling data modules under SECUIR, each exposing standardized REST/gRPC endpoints.
 
-5. **Hands-Free Voice Navigation (HFVN)**  
-   - Natural-language interface enabling situational queries, command execution, and audit reviews.  
-   - Local edge-AI processing for wake-word detection; semantic payloads routed to core engine.  
-   - Biometric authentication via BEST (Fingerprint, Aura, Voiceprint, Odor, Retina, Signature).
+User-GROUP overlays on top of all data flows, orchestrating consensus flows and sociocratic feedback loops.
 
-6. **Dynamic SLAs & Smart Contracts**  
-   - Agreements codified on a post-quantum blockchain.  
-   - Condition-triggered clauses (e.g., automatic relocation payment if hazard threshold at specified latitude/longitude is exceeded).  
-   - Transparent compensation schedules (e.g., Merit Credit disbursement tied to milestones).
-
-7. **Modular, Extensible Architecture**  
-   - Clear separation of concerns across subdirectories (`src/core`, `src/semantic`, etc.).  
-   - API hooks for new COIs, custom reward functions, and third-party connector modules (e.g., external GIS services).  
-   - Comprehensive testing suite and configuration templates for rapid prototyping.
-
----
-
-## Architecture & Directory Structure
-
-PlayNAC-KERNEL/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── config/
-│ ├── default_config.yaml
-│ └── deployment_config.yaml
-├── src/
-│ ├── core/
-│ ├── semantic/
-│ ├── huos/
-│ ├── verteca/
-│ ├── berc/
-│ ├── blockchain/
-│ ├── fs_ep/
-│ └── utils/
-├── tests/
-│ ├── unit/
-│ └── integration/
-├── data/
-│ ├── ontology_schema.json
-│ ├── sample_hazard_overlays/
-│ └── sample_parcels/
-├── docs/
-│ ├── SOMT_specification.md
-│ ├── GSSG_hardware_design.pdf
-│ └── PlayNAC_quantum_guide.md
-└── examples/
-├── run_playnac_demo.py
-├── load_sample_parcels.py
-└── hfvn_cli_example.py
-
-markdown
+Repository Layout
+bash
 Copy
 Edit
+/PlayNAC-KERNEL
+├── /docs
+│   ├── architecture.md         # Detailed design diagrams and rationale
+│   ├── module_descriptions.md  # In-depth specs for each core component
+│   └── glossary.md             # Definitions of terms and acronyms
+│
+├── /src
+│   ├── /verteca                # Entry point for virtual world runtime
+│   │   ├── server.py           # World initialization & event loop
+│   │   └── config.yaml         # Simulation configuration parameters
+│   │
+│   ├── /playnac                # Core game-theory engine
+│   │   ├── engine.py           # Main simulation orchestrator
+│   │   ├── agents.py           # Agent classes and decision heuristics
+│   │   ├── rules.py            # Governance rule definitions & payoff calculations
+│   │   └── scheduler.py        # Real-time loop & event dispatch
+│   │
+│   ├── /secuir                 # Authentication, authorization, audit
+│   │   ├── auth.py             # Identity management (FAVORS interface)
+│   │   ├── policy.py           # Policy enforcement engine (GAIA overlays)
+│   │   └── audit.py            # Audit logging & traceability
+│   │
+│   ├── /earnedpath             # Social justice token system
+│   │   ├── tokens.py           # Token issuance, burning, and ledger
+│   │   └── api.py              # REST/gRPC endpoints for EarnedPath queries
+│   │
+│   ├── /berc                   # Environmental/resource data codex
+│   │   ├── ingestion.py        # Data ingestion pipelines (sensors, oracles)
+│   │   ├── storage.py          # Database schema & indexing
+│   │   └── api.py              # REST/gRPC endpoints for resource queries
+│   │
+│   ├── /usergroup              # Sociocratic overlays & GAIA integrations
+│   │   ├── grouping.py         # Group membership & role assignments
+│   │   ├── consensus.py        # Voting & feedback algorithms
+│   │   └── analytics.py        # Enneagram profiling & collaboration scoring
+│   │
+│   └── /utils                  # Shared utilities & common helpers
+│       ├── logger.py           # Standardized logging wrapper
+│       └── config_loader.py    # YAML/JSON config parser
+│
+├── /tests
+│   ├── test_playnac.py         # Unit tests for PlayNAC engine
+│   ├── test_secuir.py          # Unit tests for authentication & policy
+│   ├── test_earnedpath.py      # Unit tests for token operations
+│   ├── test_berc.py            # Unit tests for data ingestion & queries
+│   └── test_usergroup.py       # Unit tests for grouping & consensus functions
+│
+├── /scripts
+│   ├── deploy.sh               # Deployment script to Docker/Kubernetes
+│   ├── ingest_data.sh          # Sample data ingestion pipeline runner
+│   └── launch_simulation.sh    # Example script to start a PlayNAC session
+│
+├── .env.example                # Example environment variables  
+├── Dockerfile                  # Container definition for the entire KERNEL  
+├── docker-compose.yml          # Orchestrates service components for local dev  
+├── requirements.txt            # Python dependencies (e.g., FastAPI, SQLAlchemy)  
+└── README.md                   # <- (This file)  
+Installation & Setup
+Prerequisites
+Operating System: Linux (Ubuntu ≥20.04) or macOS. Windows users should use WSL2.
 
-- **`config/`**: Configuration templates (YAML) for local vs. production deployment.  
-- **`src/`**: Primary code modules (see [Modules & Components](#modules--components)).  
-- **`tests/`**: Unit and integration tests to validate each subsystem.  
-- **`data/`**: Sample datasets, ontology schemas, and hazard shapefiles.  
-- **`docs/`**: Detailed specifications, white papers, and hardware documentation.  
-- **`examples/`**: Illustrative scripts to demonstrate core workflows.
+Python: 3.10 or later (managed via pyenv or system package).
 
----
+Docker: Docker Engine ≥20.10 and Docker Compose ≥1.29.
 
-## Getting Started
+Database: PostgreSQL ≥14 (optional—can use SQLite for local testing).
 
-### Prerequisites
+Sensible Hardware:
 
-- **Python** 3.10+  
-- **Node.js** 16.x (for potential HFVN frontend components)  
-- **PostgreSQL** 13+ (storing SOMT graph metadata)  
-- **Redis** 6+ (caching real-time sensor streams)  
-- **Quantum SDK** (optional for local simulation; e.g., IBM Qiskit or D-Wave Ocean SDK)  
-- **LibGEOS** (for geospatial polygon operations)  
-- **GDAL/OGR** (for shapefile processing)  
+≥8 GB RAM (recommended)
 
-### Installation
+Multi-core CPU (≥4 cores)
 
-1. **Clone the Repository**  
-   ```bash
-   git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
-   cd PlayNAC-KERNEL
-Create & Activate Python Virtual Environment
+≥20 GB free disk space
+
+Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
+cd PlayNAC-KERNEL
+Environment Variables
+Copy the example environment file and customize:
 
 bash
 Copy
 Edit
-python3 -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
+cp .env.example .env
+Edit the following keys in .env:
+
+DATABASE_URL (e.g., postgresql://user:password@localhost:5432/playnac_db)
+
+VERTECA_HOST (default: 0.0.0.0)
+
+VERTECA_PORT (default: 8000)
+
+JWT_SECRET_KEY (secure random string for SECUIR auth tokens)
+
+BLOCKCHAIN_ENDPOINT (URL of blockchain node for anchoring transactions)
+
 Install Python Dependencies
+Create a virtual environment and install:
 
 bash
 Copy
 Edit
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
 pip install -r requirements.txt
-Install Node.js Dependencies (if using HFVN front-end)
+Build & Launch via Docker (Recommended)
+All core services (PostgreSQL, PlayNAC API, Secuir API, etc.) can be brought up via Docker Compose:
 
 bash
 Copy
 Edit
-cd src/huos/frontend
-npm install
-cd ../../..
-Initialize Database & Caches
+docker-compose up --build
+Access Points:
 
-Create a PostgreSQL database named playnac_somt.
+PlayNAC core API: http://localhost:8000/api/playnac/
 
-Run migrations (Alembic or custom ORM scripts) to instantiate the SOMT schema.
+EarnedPath API: http://localhost:8001/api/earnedpath/
 
-Ensure Redis is running on default port 6379.
+BERC API: http://localhost:8002/api/berc/
 
-Configure Environment Variables
-Copy config/default_config.yaml to config/local_config.yaml and update:
+User-GROUP API: http://localhost:8003/api/usergroup/
 
-yaml
-Copy
-Edit
-database:
-  host: localhost
-  port: 5432
-  user: playnac_user
-  password: <YOUR_DB_PASSWORD>
-  name: playnac_somt
-
-redis:
-  host: localhost
-  port: 6379
-
-quantum:
-  provider: ibm
-  api_key: <OPTIONAL_FOR_QUANTUM>
-
-huos:
-  speech_api_key: <SPEECH_RECOGNITION_API_KEY>
-  tts_api_key: <TEXT_TO_SPEECH_API_KEY>
-Environment Configuration
-Local Development: Use config/local_config.yaml.
-
-Production: Create config/production_config.yaml with secure credentials and scaled settings (e.g., Redis cluster, managed Postgres).
-
-Feature Flags: Toggle quantum vs. classical PlayNAC via environment variable PLAYNAC_MODE (classical or quantum).
-
-Running the Kernel
-Start Backend Services
+Local Development (Without Docker)
+Initialize Database
 
 bash
 Copy
 Edit
-# In one terminal:
-source .venv/bin/activate
-python src/core/server.py --config=config/local_config.yaml
-This initializes:
-
-SOMT graph database service
-
-PlayNAC engine listening on port 8000 (default)
-
-HFVN WebSocket interface (if enabled)
-
-Launch HFVN Frontend (optional)
+psql -U postgres -c "CREATE DATABASE playnac_db;"
+alembic upgrade head
+Run each service in separate terminals
 
 bash
 Copy
 Edit
-cd src/huos/frontend
-npm run start
-Access at http://localhost:3000 for voice-activated interfaces.
+# VERTECA (Virtual World)
+cd src/verteca
+uvicorn server:app --host $VERTECA_HOST --port $VERTECA_PORT --reload
 
-Run Example Workflows
+# PlayNAC Engine
+cd src/playnac
+uvicorn engine:app --host 0.0.0.0 --port 8100 --reload
+
+# SECUIR
+cd src/secuir
+uvicorn auth:app --host 0.0.0.0 --port 8200 --reload
+
+# EarnedPath
+cd src/earnedpath
+uvicorn api:app --host 0.0.0.0 --port 8300 --reload
+
+# BERC
+cd src/berc
+uvicorn api:app --host 0.0.0.0 --port 8400 --reload
+
+# User-GROUP
+cd src/usergroup
+uvicorn api:app --host 0.0.0.0 --port 8500 --reload
+Usage
+Once all services are running, you can:
+
+Register a User (SECUIR)
+
+http
+Copy
+Edit
+POST /api/v1/auth/register  
+Content-Type: application/json
+
+{
+  "username": "alice@example.com",
+  "password": "SecurePass!23",
+  "biometric_signature": { /* FAVORS payload */ }
+}
+Response: JWT token for authenticated calls.
+
+Issue EarnedPath Tokens
+
+http
+Copy
+Edit
+POST /api/v1/earnedpath/mint  
+Authorization: Bearer <JWT_TOKEN>  
+Content-Type: application/json
+
+{
+  "user_id": "UUID-of-alice",
+  "amount": 100,
+  "reason": "Community volunteer hours"
+}
+Response: Confirmation of token issuance and updated balance.
+
+Log Environmental Data (BERC)
+
+http
+Copy
+Edit
+POST /api/v1/berc/ingest  
+Authorization: Bearer <JWT_TOKEN>  
+Content-Type: application/json
+
+{
+  "source_id": "sensor-01",
+  "metric": "water_level",
+  "value": 23.5,
+  "timestamp": "2025-06-06T14:32:00Z"
+}
+Response: Acknowledgement and new resource index.
+
+Spawn PlayNAC Simulation
 
 bash
 Copy
 Edit
-python examples/run_playnac_demo.py --config=config/local_config.yaml
-This script will:
+cd src/playnac
+python engine.py --scenario sample_scenario.yaml
+This loads a predefined YAML file describing agent populations, initial EarnedPath distributions, BERC data feeds, and policy overlays. The simulation output is written to logs/playnac_run_<timestamp>.json.
 
-Load sample parcels from data/sample_parcels/
+View Sociocratic Feedback Loops (User-GROUP)
 
-Ingest hazard overlays from data/sample_hazard_overlays/
-
-Trigger a PlayNAC negotiation for conflict resolution
-
-Output dynamic SLA details to console
-
-Usage & Workflow
-The typical PlayNAC KERNEL workflow involves:
-
-Data Ingestion
-
-In Situ Sensor Streams: Push environmental telemetry (GSSG, HFVN, third-party IoT) to Redis channels.
-
-Batch Upload: Ingest shapefiles, survey data, and cadastral records via load_sample_parcels.py.
-
-SOMT Graph Construction
-
-Nodes: PropertyParcel, HazardZone, GSSG_Node, COI_Agent, etc.
-
-Edges: overlaps_with, monitored_by, depends_on, belongs_to_COI.
-
-Persisted in PostgreSQL with PostGIS extension for geospatial indexing.
-
-Conflict Detection & Alerting
-
-SomtWatcher service continually checks for new spatial overlaps (e.g., flood zone encroachment).
-
-HFVN sends notification: “Parcel #XYZ now overlaps with FloodHazardZone.”
-
-PlayNAC Negotiation
-
-COI agents register their preferences, constraints, and BERC weights.
-
-Kernel schedules a negotiation round (classical simulation or quantum job).
-
-Agents exchange simulated proposals; the solver identifies Pareto-optimal or BERC-balanced outcomes.
-
-Ratification & SLA Generation
-
-Approved solution is encoded as a smart contract (post-quantum blockchain).
-
-Dynamic SLA stored as ontology edges in SOMT and mirrored on the chain.
-
-HFVN notifies COI chairs and property owners of new SLA details.
-
-Monitoring & Enforcement
-
-Real-time sensor telemetry updates hazard indices; SLA triggers (e.g., relocation payments) are executed automatically.
-
-Audit logs and provenance chains are maintained for after-action reviews.
-
-Core Commands
-Below are common CLI commands for interacting with the kernel:
-
-bash
+http
 Copy
 Edit
-# Ingest sample parcels into SOMT
-python src/core/ingest_parcels.py \
-  --parcel_dir=data/sample_parcels/ \
-  --config=config/local_config.yaml
-
-# Ingest hazard overlays (GeoJSON or Shapefile)
-python src/core/ingest_hazards.py \
-  --hazard_file=data/sample_hazard_overlays/flood_zones.geojson \
-  --config=config/local_config.yaml
-
-# Launch PlayNAC negotiation for a specific COI
-python src/core/run_playnac.py \
-  --coi=LandManagement \
-  --config=config/local_config.yaml
-
-# Query SOMT via CLI for spatial overlap
-python src/core/query_somt.py \
-  --latitude=29.9511 \
-  --longitude=-90.0715 \
-  --radius=0.01 \
-  --config=config/local_config.yaml
-
-# Generate a report of dynamic SLAs pending execution
-python src/core/generate_sla_report.py \
-  --output=reports/sla_report_$(date +%Y%m%d).pdf \
-  --config=config/local_config.yaml
-Use --help on any script to view additional options.
+GET /api/v1/usergroup/consensus?group_id=<UUID>
+Authorization: Bearer <JWT_TOKEN>
+Response: Current consensus score, participation metrics, and predicted “next cycle” outcomes.
 
 Extending the Kernel
-Adding a New COI Agent
+The modular design of PlayNAC KERNEL allows you to:
 
-Create a subclass of src/core/agent_base.py, implementing:
+Add new agent types by extending src/playnac/agents.py and defining custom heuristics.
 
-define_reward_function(self, somt_snapshot)
+Define additional governance rules in src/playnac/rules.py (e.g., alternative voting mechanisms, reputation-based influence).
 
-generate_proposals(self)
+Integrate new data sources into BERC by adding ingestion pipelines under src/berc/ingestion.py (e.g., IoT networks, third-party oracles).
 
-evaluate_proposal(self, other_proposal)
+Customize EarnedPath logic (e.g., dynamic penalty models, tiered merit multipliers) by editing src/earnedpath/tokens.py.
 
-Register the new agent in src/core/agent_registry.yaml with a unique coi_name.
+Enhance GAIA overlays with domain-specific policies in src/usergroup/analytic.py (e.g., ESG scoring, demographic weighting).
 
-Custom Reward Function
+Swap out storage backends (e.g., migrate from PostgreSQL to Cassandra) by modifying src/utils/config_loader.py and adjusting storage.py modules.
 
-Inside your agent subclass, incorporate new metrics (e.g., local air-quality index).
+For any extension, follow these steps:
 
-Extend the BERC scoring formulas found in src/berc/berc_calculator.py.
+Fork the repository and create a feature branch (e.g., feature/your-extension).
 
-Integrating an External GIS Layer
+Write unit tests under tests/ that cover new functionality. Existing CI pipelines run pytest on every push.
 
-Add a new ingestion script under src/semantic/ (e.g., ingest_custom_gis.py).
+Maintain code style: use flake8 and black for formatting.
 
-Update ontology_schema.json to define any new node types or spatial attributes.
-
-Ensure geospatial coordinates (longitude, latitude) are included as node properties for OGC compliance.
-
-Deploying a Quantum Solver
-
-Configure credentials in config/local_config.yaml under the quantum section.
-
-Implement a new optimizer class in src/core/quantum_optimizer.py that adheres to the interface defined in src/core/optimizer_base.py.
-
-Toggle PLAYNAC_MODE=quantum to route negotiation jobs to the quantum backend.
-
-HFVN Language Model Tuning
-
-Adjust speech-to-text and text-to-speech settings in config/local_config.yaml.
-
-Extend src/huos/intent_parser.py to recognize new domain-specific utterances (e.g., “Show property parcels within 100 m of 29.95N, 90.07W”).
-
-Modules & Components
-Core Engine (src/core)
-server.py
-
-Entry point for the backend services. Initializes database connections, Redis subscribers, and PlayNAC scheduler.
-
-agent_base.py
-
-Abstract base class defining the interface for COI agents.
-
-playnac_manager.py
-
-Manages agent registration, negotiation orchestration, and reward function aggregation.
-
-optimizer_base.py
-
-Defines a unified interface for classical solvers and quantum optimizers.
-
-qubit_optimizer.py
-
-Implements QAOA and quantum annealing routines (via Qiskit or D-Wave).
-
-ontology_builder.py
-
-Translates raw data (shapefiles, CSVs) into SOMT node/edge structures.
-
-slt_processor.py
-
-Generates and publishes dynamic SLAs as both PostGIS entries and on-chain smart contracts.
-
-query_somt.py
-
-CLI utility for spatial and semantic queries against SOMT.
-
-Semantic Mapping (src/semantic)
-ingest_parcels.py
-
-Loads cadastral parcel shapefiles (GeoJSON, Shapefile) into SOMT with geospatial indexing.
-
-ingest_hazards.py
-
-Imports hazard polygons (flood, seismic, wildfire) and links them to existing property nodes.
-
-ontology_schema.json
-
-Defines node types, attributes, and permissible edges for the knowledge graph.
-
-schema_validator.py
-
-Ensures incoming data conforms to the defined ontology before insertion.
-
-HUOS Integration (src/huos)
-hfvn_server.py
-
-WebSocket server for real-time voice interface. Accepts audio streams, returns semantic payloads.
-
-intent_parser.py
-
-Natural language processing module that maps user utterances to kernel commands or queries.
-
-auth_manager.py
-
-Manages BEST biometric authentication (integrating with local biometric sensors or third-party APIs).
-
-VERTECA Simulator (src/verteca)
-simulation_engine.py
-
-Models virtual environments (city regions, infrastructure networks) for “what-if” analyses.
-
-scenario_manager.py
-
-Defines scenario templates (e.g., “0.8 m sea-level rise by 2035”, “Magnitude 7.0 earthquake in zone 2”).
-
-visualizer.py
-
-Generates 2D/3D visualizations of SOMT overlays for review by planners and stakeholders.
-
-BERC Scoring (src/berc)
-berc_calculator.py
-
-Implements Bio-Ecologic Ratings codex formulas: ecological footprint, social contribution, restorative impact.
-
-berc_thresholds.json
-
-Defines BERC band thresholds used for reward function weighting in PlayNAC.
-
-brc_reporter.py
-
-Generates periodic BERC reports for COI dashboards.
-
-Blockchain Connectors (src/blockchain)
-post_quantum_chain.py
-
-Interface for deploying and interacting with post-quantum smart contracts (e.g., SLA postings).
-
-transaction_manager.py
-
-Handles signing, submission, and monitoring of chain transactions.
-
-blockchain_config.yaml
-
-Network endpoints, chain parameters, and credential placeholders.
-
-FS-EP Predictive Modules (src/fs_ep)
-seismic_predictor.py
-
-Implements Fourier-Schumann Earth Prediction models to forecast seismic events.
-
-environmental_forecaster.py
-
-Projects flood, drought, and wildfire risks based on climate datasets.
-
-fs_ep_trainer.py
-
-Tools to retrain predictive models as new sensor data arrives.
-
-Utility & Helpers (src/utils)
-geo_utils.py
-
-Geospatial calculations: geodesic distances, polygon overlaps, buffer generation.
-
-config_loader.py
-
-Unified configuration loader supporting nested YAML, environment overrides.
-
-logging_setup.py
-
-Standardized logging formatter with timestamp, module, and log level.
-
-email_notifier.py
-
-Sends email alerts to COI chairs when HFVN is unavailable or UI load spikes.
-
-Configuration Files
-config/default_config.yaml
-
-Template with all configurable parameters (database, Redis, quantum, huos, blockchain).
-
-config/local_config.yaml (copy of default; overrides for development)
-
-config/production_config.yaml (secure overrides for production)
-
-Sample default_config.yaml:
-
-yaml
-Copy
-Edit
-database:
-  host: localhost
-  port: 5432
-  user: playnac_user
-  password: changeme
-  name: playnac_somt
-
-redis:
-  host: localhost
-  port: 6379
-
-quantum:
-  provider: ibm
-  api_key: null
-
-huos:
-  speech_api_key: null
-  tts_api_key: null
-
-blockchain:
-  endpoint: https://pq-chain.example.org
-  credentials:
-    cert_path: null
-    key_path: null
-
-playnac:
-  mode: classical        # or "quantum"
-  max_iterations: 1000
-  convergence_threshold: 0.01
-
-logging:
-  level: INFO
-  file: logs/playnac_kernel.log
-Testing
-Run Unit Tests
-
-bash
-Copy
-Edit
-source .venv/bin/activate
-pytest tests/unit --maxfail=1 --disable-warnings -q
-Run Integration Tests
-
-bash
-Copy
-Edit
-pytest tests/integration --maxfail=1 --disable-warnings -q
-Code Coverage Report
-
-bash
-Copy
-Edit
-coverage run -m pytest tests/
-coverage report -m
-Linting & Formatting
-
-Black for Python code:
-
-bash
-Copy
-Edit
-black src/ tests/
-Flake8 for style checks:
-
-bash
-Copy
-Edit
-flake8 src/ tests/
-HFVN Interface Tests
-
-Simulate speech commands via tests/integration/test_hfvn.py, ensuring correct semantic parsing.
-
-Ensure all tests pass before merging feature branches. Continuous Integration pipelines should run these checks automatically on every pull request.
+Submit a pull request describing your changes, linking any issue or design discussion.
 
 Contributing
-We welcome contributions from the community. Before submitting a pull request, please:
+We welcome contributions from researchers, developers, and enthusiasts who share the vision of New Age Cybernetics. Please adhere to the following guidelines:
 
-Fork the repository and create a new branch (e.g., feature/my-feature).
+Code of Conduct
+All contributors must abide by the ERES Institute Code of Conduct.
 
-Ensure your branch passes all existing tests and adheres to code style (Black + Flake8).
+Branching Strategy
 
-Write clear, concise commit messages.
+main — Stable, release-ready code (tagged by version).
 
-Update documentation if your changes affect public APIs or workflows.
+develop — Active development (integration of new features).
 
-Open a pull request against the main branch.
+feature/<name> — New functionality, bugfix, or module.
 
-Coding Guidelines
-Follow PEP 8 style conventions for Python code.
+Commit Messages
 
-Document all public classes and methods with docstrings (Google style).
+Use imperative tense (e.g., “Add new agent class for consensus module”).
 
-For new features, include unit tests under tests/unit/.
+Reference issue numbers where applicable (e.g., “Fix #125: streamline EarnedPath mint endpoint”).
 
-For system-level changes or end-to-end scenarios, include integration tests under tests/integration/.
+Testing & CI
 
-Use semantic versioning for any backward-incompatible changes to agent interfaces or SLA schemas.
+Include unit tests for new features under tests/.
 
-Issue Tracking
-New Feature Requests: Label as enhancement.
+Ensure all tests pass locally (pytest) before submitting.
 
-Bug Reports: Label as bug and provide minimal reproduction steps.
+The CI pipeline automatically checks style (flake8), formatting (black), and runs tests on every PR.
 
-Discussion / RFC: Use the discussion category for large-scale design proposals.
+Documentation
+
+Update docs/architecture.md or docs/module_descriptions.md to reflect any design changes.
+
+If introducing new configuration parameters, add them to .env.example and docs/configuration.md.
+
+Release Process
+
+Merge all tested features into develop.
+
+When reaching a stable milestone, create a release branch (e.g., release/v7.3) and update version identifiers.
+
+Tag the release on main with semantic versioning (e.g., v7.3.0).
 
 License
-This project is licensed under the MIT License. See LICENSE for full text.
+This repository is currently maintained by the ERES Institute for New Age Cybernetics.
+License: To be determined. Please refer to LICENSE.md once available, or contact the maintainers for inquiries about usage rights and redistribution.
 
-Contact
-ERES Institute for New Age Cybernetics
+Contact & Support
+Project Repository:
+https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL
+
+Maintainer:
+Joseph A. Sprute
 
 Email: eresmaestro@gmail.com
 
-Website: https://www.eres-institute.org
+ERES Institute, Bella Vista, Arkansas
 
-GitHub Organization: https://github.com/ERES-Institute-for-New-Age-Cybernetics
+Community & Discussion:
 
-Repositories of Interest:
+Join PlayNAC Discussions for design debates, feature requests, and roadmap planning.
 
-PlayNAC-KERNEL: https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL
+For urgent security issues, please open a “Security” issue and tag @security-team.
 
-Proof-of-Work: https://github.com/ERES-Institute-for-New-Age-Cybernetics/Proof-of-Work
+ERES PlayNAC KERNEL aims to empower researchers, civic planners, and technologists to collaborate on next-generation governance models. By combining cybernetic game theory with real-time data and sociocratic overlays, we intend to demonstrate how decentralized, adaptive systems can foster equitable, sustainable communities.
 
-GERP-Framework: https://github.com/ERES-Institute-for-New-Age-Cybernetics/GERP-Framework
-
-For direct queries or collaboration proposals, please open an issue or submit a pull request.
-
-Acknowledgments & References
-SOMT Specification: Detailed in docs/SOMT_specification.md
-
-GSSG Hardware Design: See docs/GSSG_hardware_design.pdf
-
-PlayNAC Quantum Guide: See docs/PlayNAC_quantum_guide.md
-
-Empirical Realtime Education System (ERES) (Sprute, 2025) – foundational monograph outlining New Age Cybernetic principles and architectures.
-
-Biamonte, J. et al. “Quantum Machine Learning” (Nature, 2017) – for QAOA and quantum optimization background.
-
-Liu, Q., Jin, X., & Gong, W. “Deep Learning-Based Early Warning of Flood Disasters” (Journal of Hydrology, 2021) – for integrating real-time hazard forecasting.
-
-Thank you for exploring the ERES PlayNAC KERNEL. We look forward to your contributions and collaboration as we co-create resilient, equitable, and transparent AI-driven systems.
+Copy
+Edit
