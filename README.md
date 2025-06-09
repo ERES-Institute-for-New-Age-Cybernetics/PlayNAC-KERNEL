@@ -2,7 +2,7 @@
 
 **Version:** v1.7 (Last updated: 2025-06-08)
 
-The **PlayNAC KERNEL** is the core cybernetic game-theory engine of the ERES Institute’s New Age Cybernetics framework. It provides the computational substrate for simulation, decision support, and real-time feedback across integrated systems such as EarnedPath, GERP, BERC, and related modules.
+The **PlayNAC KERNEL** serves as the core cybernetic game-theory engine of the ERES Institute’s New Age Cybernetics framework. It models and simulates socio-economic and ecological processes using adaptive, non-punitive remediation principles integrated across multiple modules.
 
 ---
 
@@ -23,91 +23,95 @@ The **PlayNAC KERNEL** is the core cybernetic game-theory engine of the ERES Ins
 
 ## Project Overview
 
-PlayNAC KERNEL is designed to model socio-economic and ecological processes using an adaptive, non-punitive remediation game-theory approach. It underpins applications such as:
+PlayNAC KERNEL underpins applications within New Age Cybernetics, providing a computational substrate for:
 
-* **EarnedPath (EP):** Tokenized ledger for individual and community contributions
+* **EarnedPath (EP):** Tokenized ledgers of individual and community contributions
+* **EPIR‑Q:** Empirical Realtime Identity & Emotional Analytics
 * **GiantERP (GERP):** Global resource planning and allocation
-* **Bio-Electric Ratings Codex (BERC):** Real-time ecological and health metrics
-* **Vacationomics:** Incentive-driven time-allocation for well-being and productivity
+* **Bio‑Electric Ratings Codex (BERC):** Real‑time ecological and health metrics
+* **Vacationomics:** Incentive‑driven well‑being time allocation
+* **EDF:** Earth Defense Federation—planetary security protocols
 
-This engine ingests multidimensional metadata, runs iterative simulation cycles, and outputs heuristic scores and policy recommendations.
+These modules work in concert to generate heuristic scores, policy recommendations, and resource allocations in real time.
 
 ---
 
 ## Key Concepts & Acronyms
 
-| Acronym | Definition                                            |
-| ------- | ----------------------------------------------------- |
-| EP      | EarnedPath – Contribution tracking token system       |
-| GERP    | GiantERP – Earth Resource Planner                     |
-| BERC    | Bio-Electric Ratings Codex                            |
-| UBIMIA  | Universal Basic Income + Merit × Investments ± Awards |
-| THOW    | Tiny Homes On Wheels                                  |
-| FDRV    | Fly & Dive RV (Spaceship Futures)                     |
-| HFVN    | Hands-Free Voice Navigation                           |
-| GSSG    | Green Solar-Sand Glass                                |
-| CARE    | Constant @EP #ERES ^GERP \*Vacationomic %Manage       |
-| SOMT    | Sociocratic Overlay Metadata Tapestry                 |
-| NAC     | New Age Cybernetics                                   |
+| Acronym    | Definition                                                                     |
+| ---------- | ------------------------------------------------------------------------------ |
+| EP         | EarnedPath – Contribution tracking token system                                |
+| EPIR‑Q     | Empirical Realtime Identity & Emotional Analytics                              |
+| GERP       | GiantERP – Global Earth Resource Planner                                       |
+| BERC       | Bio‑Electric Ratings Codex — ecological & health sensor metrics                |
+| UBIMIA     | Universal Basic Income + Merit × Investments ± Awards                          |
+| Gracechain | Blockchain framework ensuring transparent, traceable contributions             |
+| Meritcoin  | Dynamic token representing merit-based credits                                 |
+| GCF        | Graceful Contribution Formula — integrates UBI, Merit, Investments, and Awards |
+| NBERS      | National Bio‑Ecologic Ratings System — standardized ecological scoring         |
+| EDF        | Earth Defense Federation — integrated planetary security and preparedness      |
+| THOW       | Tiny Homes On Wheels                                                           |
+| FDRV       | Fly & Dive RV (Spaceship Futures)                                              |
+| HFVN       | Hands‑Free Voice Navigation                                                    |
+| GSSG       | Green Solar‑Sand Glass                                                         |
+| CARE       | Constant @EP #ERES ^GERP \*Vacationomic %Manage                                |
+| SOMT       | Sociocratic Overlay Metadata Tapestry                                          |
+| NAC        | New Age Cybernetics                                                            |
 
 ---
 
 ## Features
 
-* **Modular Simulation Engine**: Encapsulate custom rulesets and game-theory logic
-* **Real-Time Feedback**: Adaptive AI loops with transparency and equity credits
-* **Multi-Layer Data Ingestion**: Support for biometric (BEST), environmental, and social metrics
-* **Blockchain Integration**: Tokenization via EarnedPath and Meritcoin
-* **Extensible API**: Python and REST endpoints for integration with third‑party systems
+* **Modular Simulation Engine:** Customizable rulesets and game‑theory logic
+* **Real‑Time AI Feedback:** Adaptive loops with transparency & equity credits
+* **Multidimensional Data Ingestion:** Biometric (BEST), environmental, social, and economic metrics
+* **Blockchain Integration:** Tokenization via EP, Gracechain, and Meritcoin
+* **Extensible API:** Python SDK and REST endpoints for third‑party integration
 
 ---
 
 ## Architecture
 
-```
-[Input] → [Data Layer: JSON / Blockchain] → [Simulation Engine: PlayNAC KERNEL] → [AI Feedback Module] → [Output: Dashboard / API]
+```text
+[Input Data] → [Data Layer: JSON / Blockchain] → [PlayNAC KERNEL Core] → [AI Feedback Module] → [Output Services]
 ```
 
-1. **Data Layer**: Collates EP transactions, BERC sensor feeds, GERP resource logs
-2. **Kernel Core**: Executes iterative play cycles, scoring heuristics, and collision-avoidance math
-3. **AI Feedback**: Applies adaptive weighting (Λ·Φ) and policy penalty functions (Γ·C\_t)
-4. **Output Services**: Provides REST API and Python SDK for dashboards, reports, and real‑time control
+1. **Data Layer:** Collects EP transactions, BERC sensor feeds, GERP logs, EPIR‑Q analytics
+2. **Kernel Core:** Executes iterative play cycles, scoring heuristics (Λ·Φ), collision‑avoidance math (Γ·C\_t)
+3. **AI Feedback Module:** Applies adaptive weighting, policy penalties, and equity credits (Ξ·ΔW)
+4. **Output Services:** Provides results via REST API, Python SDK, and dashboards
 
 ---
 
 ## Installation
 
-1. Clone the repository:
+```bash
+# Clone repository
+git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
+cd PlayNAC-KERNEL
 
-   ```bash
-   git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
-   cd PlayNAC-KERNEL
-   ```
-2. Create a virtual environment (Python 3.10+ recommended):
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate   # Windows
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # Linux/macOS
-   venv\Scripts\activate   # Windows
-   ```
-3. Install dependencies:
+# Install dependencies
+pip install -r requirements.txt
+```
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. (Optional) Set environment variables for blockchain endpoints and API keys.
+*Optional:* Configure environment variables for blockchain endpoints, API keys, and logging.
 
 ---
 
 ## Usage
 
-### Running Simulations
+### Run a Simulation
 
 ```bash
 python run_simulation.py --config configs/default.yaml
 ```
 
-### Python SDK
+### Python SDK Example
 
 ```python
 from playnac import Kernel
@@ -118,17 +122,15 @@ print(results.summary())
 
 ### REST API
 
-Start the API server:
-
 ```bash
 uvicorn api:app --reload
 ```
 
 Access endpoints:
 
-* `GET /status` – Kernel health
-* `POST /simulate` – Run a simulation cycle
-* `GET /results` – Fetch latest scores and metrics
+* `GET /status` — Health check
+* `POST /simulate` — Run simulation
+* `GET /results` — Fetch latest metrics
 
 ---
 
@@ -138,48 +140,50 @@ Access endpoints:
 PlayNAC-KERNEL/
 ├── api/                   # REST API implementation
 ├── configs/               # YAML configuration files
-├── docs/                  # Design docs and whitepapers
+├── docs/                  # Design documents & whitepapers
 ├── playnac/               # Core kernel package
-│   ├── engine.py
-│   ├── feedback.py
-│   └── utils.py
-├── scripts/               # Utility and maintenance scripts
-├── tests/                 # Unit and integration tests
+│   ├── engine.py          # Simulation engine
+│   ├── feedback.py        # AI feedback module
+│   └── utils.py           # Helper functions
+├── scripts/               # Utility scripts
+├── tests/                 # Unit & integration tests
 ├── requirements.txt       # Python dependencies
-├── run_simulation.py      # Main entry point for simulations
-└── README.md              # (This file)
+├── run_simulation.py      # CLI entry point
+└── README.md              # Project overview (this file)
 ```
 
 ---
 
 ## Development & Contribution
 
-We welcome contributions to enhance simulation rules, add new modules, and improve performance:
+Contributions are welcome! To get started:
 
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature/awesome-update`
-3. Implement your changes and add tests.
+1. Fork and clone the repo.
+2. Create a feature branch (`git checkout -b feature/xyz`).
+3. Implement changes, add tests.
 4. Run tests:
 
    ```bash
    pytest --cov=playnac
    ```
-5. Commit and push, then open a pull request.
+5. Push and open a Pull Request.
 
-Please adhere to our [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
+Please follow our [Code of Conduct](CODE_OF_CONDUCT.md) and contribution guidelines.
 
 ---
 
 ## License
 
-This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
 
 ---
 
 ## Contact & Support
 
-* **Issues & Bugs**: [https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/issues](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/issues)
-* **Discussion Forum**: [https://forum.eresinstitute.org](https://forum.eresinstitute.org)
-* **Lead Maintainer**: Joseph A. Sprute ([eresmaestro@gmail.com](mailto:eresmaestro@gmail.com))
+* **Issues & Discussion:** [https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/issues](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/issues)
+* **Community Forum:** [https://forum.eresinstitute.org](https://forum.eresinstitute.org)
+* **Maintainer:** Joseph A. Sprute ([eresmaestro@gmail.com](mailto:eresmaestro@gmail.com))
 
-Thank you for engaging with the PlayNAC KERNEL—driving the future of New Age Cybernetics!
+---
+
+*Thank you for advancing New Age Cybernetics with PlayNAC KERNEL!*
