@@ -1,29 +1,31 @@
-PlayNAC-KERNEL
-Interactive Driver for the ERES New Age Cybernetics Framework
-Author/Steward: Joseph A. Sprute — ERES Maestro
+# PlayNAC-KERNEL
 
-Executive Brief
-PlayNAC-KERNEL is the central orchestrator of New Age Cybernetics — the place where civic ethics, economic instruments, ecological intelligence, and human-machine symbiosis meet.
+**Interactive Driver for the ERES New Age Cybernetics Framework**  
+Author/Steward: *Joseph A. Sprute — ERES Maestro*  
 
-This is not just a software project. It is the living kernel of a 1,000-year governance and economic plan — a plan already anchored by the 1 Quadrillion Stewardship model entrusted to fiduciary oversight by Emanuel M. Alexiou and blessed in spirit by the Dalai Lama.
+---
 
-From Tiny Homes on Wheels (THOW) to Spaceship Vacationomics, the PlayNAC-KERNEL integrates EarnedPath migration, real-time semantic governance, and non-punitive remediation to create a CARE-based commonwealth.
+## Executive Brief
 
-Its core mandates:
+PlayNAC-KERNEL is the **central orchestrator** of New Age Cybernetics — the place where civic ethics, economic instruments, ecological intelligence, and human-machine symbiosis meet.
 
-Don’t hurt yourself — maintain self-respect, internal coherence, and bio-resonance.
+This is **not just a software project**. It is the **living kernel** of a 1,000-year governance and economic plan — a plan already anchored by the **1 Quadrillion Stewardship** model entrusted to fiduciary oversight by **Emanuel M. Alexiou** and blessed in spirit by **the Dalai Lama**.
 
-Don’t hurt others — act with empathy and non-punitive engagement.
+From **Tiny Homes on Wheels (THOW)** to **Spaceship Vacationomics**, the PlayNAC-KERNEL integrates **EarnedPath migration**, **real-time semantic governance**, and **non-punitive remediation** to create a CARE-based commonwealth.
 
-Close the loops — every civic, economic, and ecological process must return benefit to both people and planet.
+**Its core mandates:**  
+1. **Don’t hurt yourself** — maintain self-respect, internal coherence, and bio-resonance.  
+2. **Don’t hurt others** — act with empathy and non-punitive engagement.  
+3. **Close the loops** — every civic, economic, and ecological process must return benefit to both people and planet.
 
-Why now:
-We stand at the pivot from competition-only economies toward cooperative bio-ecologic economies. Delay risks deepening ecological collapse and economic disparity; action creates a measurable path toward stability, prosperity, and sustainability — not just for this generation, but for every generation to come.
+**Why now:**  
+We stand at the pivot from **competition-only economies** toward **cooperative bio-ecologic economies**. Delay risks deepening ecological collapse and economic disparity; action creates a measurable path toward stability, prosperity, and sustainability — not just for this generation, but for every generation to come.
 
-Architecture (LOGOS Framework)
-mermaid
-Copy
-Edit
+---
+
+## Architecture (LOGOS Framework)
+
+```mermaid
 flowchart TB
   %% =======================
   %% LAYOUT GROUPS
