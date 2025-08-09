@@ -1,26 +1,22 @@
-Folder & File Structure
-matlab
-Copy
-Edit
 PlayNAC-KERNEL/
-├── docs/
-│   ├── _config.yml
-│   ├── index.md
-│   ├── executive-brief.md
-│   ├── the-why.md
-│   ├── core-mandates.md
-│   ├── verteca.md
-│   ├── playnac.md
-│   ├── greenbox.md
-│   ├── secuir.md
-│   ├── cyberrave.md
-│   ├── ratings.md
-│   ├── gunnysack.md
-│   ├── salesbuilders.md
-│   ├── logos-framework.md
-│   ├── economic-vision.md
-│   ├── roadmap.md
-│   ├── license-credits.md
+└── docs/
+    ├── _config.yml
+    ├── index.md
+    ├── executive-brief.md
+    ├── the-why.md
+    ├── core-mandates.md
+    ├── verteca.md
+    ├── playnac.md
+    ├── greenbox.md
+    ├── secuir.md
+    ├── cyberrave.md
+    ├── ratings.md
+    ├── gunnysack.md
+    ├── salesbuilders.md
+    ├── logos-framework.md
+    ├── economic-vision.md
+    ├── roadmap.md
+    ├── license-credits.md
 docs/_config.yml
 yaml
 Copy
@@ -49,7 +45,7 @@ nav:
   - Economic Vision: economic-vision.md
   - Roadmap: roadmap.md
   - License & Credits: license-credits.md
-docs/index.md — Landing Page
+docs/index.md
 markdown
 Copy
 Edit
@@ -138,7 +134,7 @@ Edit
 
 ---
 
-## **`docs/playnac.md`**
+### **`docs/playnac.md`**
 ```markdown
 # PlayNAC — The Game Layer for Governance
 
@@ -157,7 +153,7 @@ Edit
 
 ---
 
-## **`docs/greenbox.md`**
+### **`docs/greenbox.md`**
 ```markdown
 # Greenbox — QuestionAnswer Isolation Architecture
 
@@ -175,7 +171,7 @@ Edit
 
 ---
 
-## **`docs/secuir.md`**
+### **`docs/secuir.md`**
 ```markdown
 # SECUIR — Trust Grid for Safe Actuation
 
@@ -194,7 +190,7 @@ Edit
 
 ---
 
-## **`docs/cyberrave.md`**
+### **`docs/cyberrave.md`**
 ```markdown
 # CyberRAVE — Resonant Adaptive Virtual Environments
 
@@ -213,7 +209,7 @@ Edit
 
 ---
 
-## **`docs/ratings.md`**
+### **`docs/ratings.md`**
 ```markdown
 # Ratings — PERC, BERC, JERC, NBERS
 
@@ -233,7 +229,7 @@ Edit
 
 ---
 
-## **`docs/gunnysack.md`**
+### **`docs/gunnysack.md`**
 ```markdown
 # Gunnysack — Holodeck for Goods & Services
 
@@ -252,7 +248,7 @@ Edit
 
 ---
 
-## **`docs/salesbuilders.md`**
+### **`docs/salesbuilders.md`**
 ```markdown
 # SalesBuilders — Economic Onboarding & Growth Framework
 
@@ -271,7 +267,7 @@ Edit
 
 ---
 
-## **`docs/logos-framework.md`**
+### **`docs/logos-framework.md`**
 ```markdown
 # LOGOS Framework — System Overview
 
@@ -310,7 +306,7 @@ Edit
 
 ---
 
-## **`docs/economic-vision.md`**
+### **`docs/economic-vision.md`**
 ```markdown
 # Economic & Governance Vision
 
