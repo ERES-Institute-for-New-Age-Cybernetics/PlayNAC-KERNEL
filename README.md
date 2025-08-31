@@ -1,264 +1,134 @@
-# PlayNAC-KERNEL
-**New-Age Cybernetic Game Theory Engine**  
-*A voice-activated, modular simulation platform for sustainable governance and human-centered development.*
+ERES PlayNAC “KERNEL”
 
----
+Empirical Realtime Education System × New Age Cybernetic Game Theory
 
-## ✨ Overview
-PlayNAC-KERNEL is the core engine of the ERES Institute’s **New-Age Cybernetics (NAC)**. It brings together **merit-centric learning (EP)**, **global resource planning (GERP)**, **bio-ecologic ratings (BERC/BEE)**, **non-punitive value exchange (GCF/UBIMIA)**, a **hands-free voice/gesture interface (VERTECA)**, and the **HUOS Solid-State v7.6** 4D VR/AR layer. The system is designed for long-horizon modeling across a **1,000-Year Future Map**. :contentReference[oaicite:1]{index=1}
+PlayNAC is a human-centered cybernetic kernel that fuses EarnedPath (EP) learning graphs, GERP resource planning, BERC bio-ecologic scoring, and a hands-free VERTECA interface to help people and cities make better, kinder decisions in real time. The codebase has evolved through multiple versions (V4 → V7.x), steadily simplifying the stack while preserving rigor.
 
-> **Mission:** Build a non-punitive, CARE-based cybernetic economy that empowers citizens, cities, and civilizations.
+✨ Core Capabilities
 
----
+EarnedPath (EP) engine — PERT/CPM/WBS-aware skill nodes, merit rules, and unlock/complete flows.
 
-## 🗺 System Architecture (Mermaid)
-```mermaid
-flowchart TD
-  subgraph NAC[New Age Cybernetics Framework]
-    direction TB
-    EP[EarnedPath<br/>Merit Tracking]
-    GERP[GERP<br/>Global Earth Resource Planning]
-    BERC[BERC/BEE<br/>Bio-Ecologic Ratings]
-    GCF[Graceful Contribution Formula<br/>(UBIMIA Ledger)]
-    VERTECA[VERTECA<br/>Voice & Gesture Interface]
-    HUOS[HUOS v7.6<br/>VR/AR + Quantum-Inspired Layer]
-    EP --> NAC
-    GERP --> NAC
-    BERC --> NAC
-    GCF --> NAC
-    VERTECA --> NAC
-    HUOS --> NAC
-  end
-  NAC --> CARE[CARE Principles<br/>("Don't hurt yourself.<br/>Don't hurt others.")]
-  NAC --> Vacationomics[Vacationomics & Spaceship Futures]
-  NAC --> SmartCity[Smart-City Migration & THOW Deployment]
-🚀 Key Features
-🌐 Bio-Ecologic Economy Simulation — PERC/BERC/JERC integration; decision overlays via NAC Clarity. 
-ResearchGate
+GERP integration — global/spatial resource planning hooks and simulation orchestration.
 
-🧭 Hands-Free Voice Navigation — VERTECA (voice + gesture, WebXR support). 
-ResearchGate
+BERC — Bio-Ecologic Ratings Codex for ecological footprint & remediation economics.
 
-🏙️ Smart-City Migration Planning — THOW, Fly-and-Dive RVs, Vacationomics. 
-Medium
+VERTECA (HFVN) — hands-free voice/gesture navigation for 4D environments.
 
-🔒 Non-Punitive Remediation — CARE-based protocols and UBIMIA value exchange. 
-Medium
+BEST Biometric Checkout — humane, auditable “Bio-Electric-Signature-Time-Sound” flow for gated resource access.
 
-⚛️ Solid-State v7.6 — HUOS 4D VR/AR, quantum-inspired processing, containerized deployment. 
-ResearchGate
+GAIA/Keyword Matrix — 17×7 semantic matrix & domain weighting for intent routing and governance.
 
-🧩 Modular SEPLTA Coverage — Social, Economic, Political, Legal, Technical, Administrative domains. 
-Medium
+V7.x emphasizes proof-of-human auth, peer review, and expert advising while trimming complexity (token economics moved out of the kernel).
 
-📂 Repository Structure (canonical)
-text
-Copy
-Edit
-PlayNAC-KERNEL/
-├── src/
-│   ├── kernel/           # Core engine + orchestration
-│   ├── ep/               # EarnedPath modules
-│   ├── gerp/             # Global Earth Resource Planning
-│   ├── berc/             # Bio-Ecologic Ratings Codex
-│   ├── verteca/          # Voice + gesture input layer (WebXR adapters)
-│   ├── huos/             # Solid-State VR/AR (Green-Box renderer, spatial audio)
-│   └── utils/            # Common helpers & middleware
-├── docs/                 # White papers, system diagrams
-├── tests/                # Unit + integration tests (incl. remediation/perf/webxr)
-├── deploy/
-│   ├── docker/           # Dockerfiles / compose
-│   └── helm/             # Helm charts (solidstate)
-├── .env.example          # Example configuration
-├── requirements.txt      # Python dependencies
-├── ERES TERMS & LICENSE.pdf
-└── README.md
-Module + folder names reflect the Solid-State v7.6 spec (HUOS/VERTECA/Green-Box, etc.). 
-ResearchGate
+🧭 Architecture (High-Level)
 
-🛠 Getting Started
-Prerequisites
-Python 3.10+ (virtualenv or Conda)
+Kernel services: EP graph, storage, media/task processing, consensus hooks.
 
-Docker 20+ / Docker Compose (optional, for orchestration)
+Storage: SQLite persistence for blocks, EP nodes, and JAS links (thread-safe).
 
-Node.js 16+ (for WebXR front-ends)
+Semantic layer: 17×7 Keyword Matrix → domain weights → GAIA votes/consensus.
 
-WebXR-compatible browser (Chrome/Edge/Firefox recent)
+Interface: VERTECA voice/gesture → command routing → kernel execute.
 
-VR/AR hardware (optional but recommended) 
-ResearchGate
+A broader rationale and city-scale placement appear in Blueprint for Civilization II (SLA baselines, smart-city migration, governance overlays).
 
-Installation
-bash
-Copy
-Edit
-git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
-cd PlayNAC-KERNEL
+📦 Repo Layout (suggested)
+/src
+  /kernel            # core orchestrator, task/ledger glue
+  /ep                # EarnedPath graph + rules
+  /gerp              # GERP client & spatial hooks
+  /berc              # Bio-ecologic scoring (BERC)
+  /hfvn              # VERTECA voice/gesture interface
+  /auth              # Biometric/Proof-of-Human adapters
+  /storage           # SQLite adapters & migrations
+  /utils             # logging, exceptions, config
+/docs
+  /architecture      # diagrams & sequence charts
+/examples
+  demo_kernel.py     # spin up kernel, submit tasks, mine a block
 
-python3 -m venv venv
-source venv/bin/activate
 
+The Work Towards Core memo outlines hardening tasks (tests, CI, observability, device drivers, VR demo). Use it as your implementation checklist.
+
+🚀 Quick Start
+
+Install
+
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-Configuration
-bash
-Copy
-Edit
-cp .env.example .env
-Set environment variables (examples drawn from v7.6 spec):
 
-HUOS_API_KEY=your_vr_api_key
 
-HUOS_WS_ENDPOINT=ws://localhost:8080/huos
+Configure
 
-SOLIDSTATE_MODE=enabled
+Create .env (or use defaults):
 
-NAC_CLARITY_LEVEL=advanced
+DATABASE_PATH=playnac.db
+BIOMETRIC_THRESHOLD=0.70
+PEER_REVIEW_THRESHOLD=0.60
 
-RENDER_QUALITY=high
 
-SPATIAL_AUDIO_QUALITY=ultra
+V7.x ships a simple ConfigManager / StorageAdapter with sane defaults.
 
-GESTURE_SENSITIVITY=0.8 
-ResearchGate
+Run the demo
 
-Run Simulation
-bash
-Copy
-Edit
-# Default kernel
-python src/kernel/playnac_kernel.py
+python examples/demo_kernel.py
 
-# Enable HUOS 4D VR/AR
-python src/kernel/playnac_kernel.py --enable-huos --mode=vr
-# or AR mode
-python src/kernel/playnac_kernel.py --enable-huos --mode=ar
-HUOS initializes spatial scenes; VERTECA maps gestures/voice; Green-Box handles rendering and spatial audio. 
-ResearchGate
 
-🧪 Testing
-bash
-Copy
-Edit
-pytest -q                     # unit & integration
-pytest tests/performance -q   # perf benchmarks
-cd tests/webxr && python -m http.server 8001   # WebXR test server
-CI linting/formatting: flake8, black, pre-commit hooks recommended. 
-ResearchGate
+Expected path: initialize kernel → create a few EP nodes → (optionally) verify proof-of-human → approve a project → mine a block → persist to SQLite.
 
-🔁 Deployment & CI/CD (Mermaid)
-mermaid
-Copy
-Edit
-flowchart LR
-  dev[Developer PR] -->|Git push| gh[GitHub Repo]
-  gh --> actions[GitHub Actions CI]
-  actions -->|Lint/Test| status{All checks pass?}
-  status -- Yes --> build[Build Docker Image]
-  status -- No --> fail[Fail PR Checks]
+🔐 Proof-of-Human & Checkout
 
-  build --> registry[(Container Registry)]
-  registry --> deploy[Helm/Kustomize Deploy]
+BiometricAuth: heartbeat/voice “liveness” checks cached per session.
 
-  subgraph Cluster[Kubernetes Cluster]
-    deploy --> api[PlayNAC API / Kernel]
-    deploy --> vertecaS[VERTECA Service]
-    deploy --> huosS[HUOS VR/AR Nodes]
-    api --> db[(State Store)]
-  end
+BEST Checkout Flow (Bio + Electric + Signature + Time + Sound): aligns kiosk scans, token debit, signed consent, synchronized timestamps, and a validated tone vector before resource release.
 
-  subgraph Edge[Operator / End-User]
-    voice[Voice Clients] --> vertecaS
-    vr[VR/AR Headsets] --> huosS
-  end
-Environments
+🧩 Modules (selected)
 
-dev — ephemeral namespaces per PR
+EarnedPathEngine — binary progression, prereq checks, credential issuance (hash-based proof).
 
-staging — nightly builds with synthetic data
+Storage (SQLite) — projects, peer reviews, skills, advisors (thread-safe).
 
-prod — pinned releases + observability (metrics/logs/traces)
+KeywordMatrix & GAIA — intent → matrix coordinates → domain weighting; consensus across 23 principal domains.
 
-Observability
+GERP Client — spatial dynamics & forecasting hooks for water/energy/food/shelter.
 
-Logs to stdout + collector (e.g., Fluent Bit)
+🗺️ Roadmap (from “Work Towards Core”)
 
-Metrics via /metrics (Prometheus)
+Integrations: EEG (Muse/OpenBCI) via AuraScanner; VERTECA with Leap/Unity; multi-ASR backends.
 
-Tracing via OpenTelemetry (OTLP)
+Reliability: module-specific exceptions; structured logs; Prometheus/ELK exporters.
 
-Containerized + Kubernetes deployment and Helm charts are specified in v7.6 docs. 
-ResearchGate
+Testing/CI: ≥95% unit coverage, end-to-end smoke scenario, security scan, docs to Pages.
 
-📖 Usage Examples
-Voice-Driven Economic Model
+Packaging: Docker Compose (kernel + mock GERP + TF server), Helm for prod.
 
-bash
-Copy
-Edit
-python src/verteca/voice_sim.py --scenario "Vacationomics"
-Multi-User Orchestration
+🔢 Version Lineage
 
-bash
-Copy
-Edit
-docker-compose up --build
-Governance Remediation Suite
+V4.0 — Full system doc + math of PlayNAC/NAC, VERTECA overview, quantum & stability notes.
 
-bash
-Copy
-Edit
-pytest tests/remediation/test_nac.py
-NAC Clarity provides decision intelligence, forecasting (GERP), and optimization. 
-ResearchGate
+V7.0 — Expanded kernel with EP nodes, media tasks, JAS links, storage, GAIA domains.
 
-🤝 Contributing
-Contributions aligned with CARE principles are welcome.
+V7.2 — Simplified: proof-of-human, 7 core development areas, ExpertAdvisor, PeerReviewEngine; removed token econ from kernel.
 
-Fork the repo
+📚 Related Blueprints
 
-git checkout -b feature/your-feature
+Law Enforcement — BEST Biometric Checkout V1.1 (specs, ethics, longitudinal validation).
 
-pip install -r requirements-dev.txt && pre-commit install
+Blueprint for Civilization II (SLA minimums, migration, governance overlays).
 
-Add tests; run pytest, flake8, black
+📄 License
 
-Open a PR against develop with a clear description & docs updates 
-ResearchGate
+Creative Commons Attribution 4.0 International (CC BY 4.0). See the license in the law-enforcement spec and reuse it repo-wide.
 
-Code Style
+🙏 Credits
 
-Python: PEP 8 + Black
+Author: Joseph A. Sprute (ERES Institute for New Age Cybernetics)
 
-JS (WebXR): ESLint rules
+Co-builders: Open-source contributors & research partners
 
-Docstrings: Google-style
+Advisory: GAIA-aligned domain leaders; community peer reviewers
 
-📜 License
-See ERES TERMS & LICENSE.pdf in this repository for authoritative terms. As published in the current collateral, PlayNAC-KERNEL content is available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (BY-NC-SA 4.0). Please review the PDF for specifics and attribution requirements. 
-GitHub
-ResearchGate
+Contributing
 
-Attribution (example)
-
-“Powered by PlayNAC-KERNEL — ERES Institute for New Age Cybernetics.”
-
-📚 References
-Sprute, J.A. ERES Solid-State v7.6 — PlayNAC KERNEL Codebase (HUOS 4D VR/AR, quantum-inspired processing, containers, Helm). 
-ResearchGate
-
-Sprute, J.A. PlayNAC-KERNEL: New-Age Cybernetic Game Theory Engine (overview & module context). 
-Medium
-
-Sprute, J.A. PlayNAC “KERNEL” Codebase v7.0 (baseline features: EP, GERP, BEE, BERC, VERTECA, GAI/Investors). 
-ResearchGate
-
-ERES TERMS & LICENSE.pdf (repo license & terms). 
-GitHub
-
-🗓️ Changelog (high-level)
-v7.6 (2025) — HUOS 4D VR/AR; quantum-inspired processing; Docker/Kubernetes; performance tuning; WebXR & Green-Box renderer. 
-ResearchGate
-
-v7.0 (2025) — Public release of kernel components (EP, GERP, BEE, BERC, VERTECA). 
-ResearchGate
+Issues and PRs welcome. Start with examples/demo_kernel.py, add tests, and keep docs current with the roadmap above.
