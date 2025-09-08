@@ -1,290 +1,338 @@
-```markdown
-# PlayNAC‑KERNEL
+# 🧠 PlayNAC KERNEL
 
-> **ERES Institute for New Age Cybernetics** · Empirical Realtime Education System (ERES) · EarnedPath (EP) · Global Earth Resource Planning (GERP)
+> **Empirical Realtime Education System × New Age Cybernetic Game Theory**
 
-[![Status](https://img.shields.io/badge/status-active-brightgreen)](#) [![License: CCAL‑v2.1](https://img.shields.io/badge/License-CCAL_v2.1-blue)](#license) [![Made with ❤️ for CARE](https://img.shields.io/badge/ethos-CARE-ff69b4)](#ethos)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Build Status](https://img.shields.io/badge/build-pending-yellow.svg)]()
 
-A production‑ready kernel for **PlayNAC** — the game‑theory engine that drives New Age Cybernetics. PlayNAC‑KERNEL turns *resonance* into *runtime*: biometric/aura sensing → ethical evaluation → incentives → remediation → learning loops at city scale.
+PlayNAC is a human-centered cybernetic kernel that integrates learning pathways, resource planning, ecological scoring, and intuitive interfaces to enable real-time decision-making for individuals and communities. The system combines rigorous computational frameworks with human-centered design principles.
 
----
+## 🎯 Vision
 
-## TL;DR
-- **Purpose:** Provide a minimal, composable core to run PlayNAC simulations, scores, and remediation flows across **EP** (EarnedPath) and **GERP** (Global Earth Resource Planning).
-- **Signal In → Value Out:**
-  - **ARI (Aura Resonance Index):** `ARI = K × F + M` (Kirlian × Fourier + Munsell) → feeds **EPIR‑Q** (judge).
-  - **EPIR‑Q (Judge):** normalizes/ethic‑checks signals: *don’t hurt yourself; don’t hurt others*.
-  - **UBIMIA (Disburse):** UBI + Merit × Investments ± Awards → allocates value, time, and opportunities.
-  - **NPR (Non‑Punitive Remediation):** targeted coaching, training, and repair instead of punishment.
-- **Security:** **SECUIR** isolation architecture; observable, auditable flows; privacy‑first by design.
-- **Surface:** **VERTECA** (voice/VR/AR), **CyberRAVE** (72 industry sims), **Gunnysack** (goods/services), **Smart‑City** (THOW, HFVN, FDRV, GSSG).
+Transform how humans and AI systems collaborate in decision-making by providing:
+- **Personalized Learning:** Adaptive skill development pathways
+- **Ecological Awareness:** Integrated environmental impact tracking
+- **Resource Optimization:** Intelligent planning and allocation systems  
+- **Intuitive Interaction:** Hands-free voice and gesture interfaces
+- **Community Governance:** Transparent, merit-based decision frameworks
 
 ---
 
-## Table of Contents
-1. [Concepts](#concepts)
-2. [Architecture](#architecture)
-3. [Repo Layout](#repo-layout)
-4. [Getting Started](#getting-started)
-5. [Core Modules](#core-modules)
-6. [Typical Flows](#typical-flows)
-7. [Data, Privacy & Security](#data-privacy--security)
-8. [Roadmap](#roadmap)
-9. [Contributing](#contributing)
-10. [License](#license)
-11. [Credits](#credits)
-12. [References](#references)
+## ⚡ Quick Start
 
----
+### Prerequisites
+- Python 3.8+
+- SQLite 3.x
+- 4GB+ RAM recommended
 
-## Concepts
+### Installation
 
-### ARI — Aura Resonance Index
-**Formula:** `ARI = K × F + M`
-- **K (Kirlian Effect / Engage):** awareness, trust, bio‑electric signature acquisition.
-- **F (Fourier Analysis / Relate):** time‑frequency coherence; pattern/story alignment.
-- **M (Munsell / Empower):** colorimetric translation to intention/action.
-**Output:** Biometric Aura → **EPIR‑Q**.
-
-### EPIR‑Q — Ethical Judge & Normalizer
-- Translates ARI signatures via **SPRT** (Signal, Pattern, Resonance, Translation).
-- Enforces the two cybernetic rules: **(1) Don’t hurt yourself. (2) Don’t hurt others.**
-- Produces *alignment scores*, *risk posture*, and *remediation recommendations*.
-
-### UBIMIA — Allocation Engine
-> **UBI + Merit × Investment ± Awards**  
-Computes disbursements to individuals and groups; locks **Centers of Excellence** to **Gravitational Relevancy** across Smart‑City markets (PlayNAC).
-
-### SECUIR — Isolation & Assurance
-- Greenbox relay for **Question↔Answer** isolation, red/green zoning, tamper‑evident logs.
-- Role/space separation for **CBGMODD**: Citizen, Business, Government, Ombudsman, Military, Dignitary, Diplomat.
-
-### VERTECA, CyberRAVE, Gunnysack
-- **VERTECA:** Voice‑first & spatial UI (VR/AR), hands‑free **HFVN**.
-- **CyberRAVE:** 72 industry vertical simulations.
-- **Gunnysack:** 0‑waste circular goods/services marketplace.
-
-### Smart‑City Substrate
-- **THOW:** Tiny Homes on Wheels (scalable housing).  
-- **FDRV:** Fly‑and‑Dive RV (mobility & resilience).  
-- **GSSG:** Graphene‑infused Green Solar‑Sand Glass (energy + comms).  
-- **NBERS:** National Bio‑Ecologic Resource Score (biosphere ↔ human harmony).
-
----
-
-## Architecture
-```
-
-\[Sensors/ARI] → \[EPIR‑Q Judge] → \[UBIMIA Allocator] → \[NPR Remediation] → \[EP/GERP State]
-│                 │                 │                   │                 │
-SECUIR IO        Policy/CARE       Meritcoin/€          Playbooks        GAIA SOMT
-│                 │                 │                   │                 │
-VERTECA UI     CBGMODD Audit     GraceChain Log      CyberRAVE Sims     Smart‑City
-
-```
-**Key Properties**
-- **Deterministic cores** with auditable randomness (for games/sims).
-- **Event‑sourced** state (append‑only, hash‑anchored: *GraceChain*).
-- **Policy‑as‑Code** for CARE/ethics gates and remediation templates.
-
----
-
-## Repo Layout
-```
-
-playnac-kernel/
-├─ packages/
-│  ├─ ari/             # K, F, M pipelines; adapters
-│  ├─ epirq/           # judge, scoring, policy normalizers
-│  ├─ ubimia/          # allocation math, ledgers, awards
-│  ├─ npr/             # non‑punitive remediation playbooks
-│  ├─ secuir/          # isolation, greenbox, attestations
-│  ├─ verteca/         # voice/VR adapters, HFVN intents
-│  ├─ sims/            # CyberRAVE verticals (sample)
-│  └─ commons/         # types, events, metrics, utils
-├─ services/
-│  ├─ gateway/         # API edge, authn/z, rate limits
-│  ├─ state/           # event store, GraceChain anchors
-│  └─ policy/          # CARE gates, CBGMODD audit trails
-├─ apps/
-│  ├─ console/         # CLI for ops/sim
-│  └─ studio/          # web dashboard (VERTECA preview)
-├─ examples/           # end‑to‑end flows
-├─ docs/               # specs, ADRs, diagrams
-└─ LICENSE
-
-````
-
----
-
-## Getting Started
-
-### Prereqs
-- Node.js 20+ and pnpm (or npm/yarn)
-- Python 3.10+ (optional, advanced signal adapters)
-- Docker (optional, for services)
-
-### Quickstart
 ```bash
-# clone
+# Clone the repository
 git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
 cd PlayNAC-KERNEL
 
-# install
-pnpm install
+# Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
-# build and test
-pnpm -r build && pnpm -r test
+# Install dependencies
+pip install -r requirements.txt
+```
 
-# run local services (event store, gateway)
-docker compose up -d
+### Configuration
 
-# start the studio (dashboard)
-pnpm --filter @playnac/apps-studio dev
-````
+Create a `.env` file in the root directory:
 
-### First Run: Hello Resonance
+```env
+# Database Configuration
+DATABASE_PATH=playnac.db
+
+# Authentication Thresholds
+BIOMETRIC_THRESHOLD=0.70
+PEER_REVIEW_THRESHOLD=0.60
+
+# Optional: Advanced Settings
+LOG_LEVEL=INFO
+GERP_ENDPOINT=http://localhost:8080
+VERTECA_ENABLED=true
+```
+
+### Run Demo
 
 ```bash
-# 1) synthesize an ARI signal
-pnpm ari synth --profile demo
-
-# 2) score it through EPIR‑Q
-pnpm epirq score ./out/demo.ari.json
-
-# 3) allocate via UBIMIA
-pnpm ubimia disburse ./out/demo.score.json
-
-# 4) emit NPR plan
-pnpm npr plan ./out/demo.score.json
+python examples/demo_kernel.py
 ```
 
-Outputs land in `./out/` and are also appended to the local **GraceChain**.
+**Expected Flow:**
+1. Initialize kernel and core services
+2. Create EarnedPath learning nodes
+3. Execute proof-of-human verification
+4. Process project approval workflow
+5. Mine consensus block
+6. Persist results to SQLite database
 
 ---
 
-## Core Modules
-
-### `packages/ari`
-
-* **K adapters:** Kirlian/biometric capture (mock + real connectors).
-* **F adapters:** FFT/STFT, coherence, anomaly flags.
-* **M adapters:** Munsell mapping, palette constraints, intent vectors.
-
-### `packages/epirq`
-
-* **SPRT pipeline**; safety/ethics gates; normalization.
-* **Policies as WASM** (deterministic); rule bundles per domain.
-
-### `packages/ubimia`
-
-* UBIMIA calculator; **Meritcoin** hooks; awards & clawbacks.
-* **GCF** (Graceful Contribution Formula) helpers.
-
-### `packages/npr`
-
-* Non‑punitive remediation recipes; timeboxed playbooks; coaching intents.
-
-### `packages/secuir`
-
-* Isolation layers, zoning, attestations, tamper‑evident logs.
-
-### `services/state`
-
-* Event‑sourced store; **GraceChain** hash anchors; exports for audits.
-
----
-
-## Typical Flows
-
-### A. Personal EarnedPath
-
-1. Capture ARI → 2. Judge (EPIR‑Q) → 3. UBIMIA disburse → 4. NPR plan → 5. Re‑measure.
-
-### B. Smart‑City Allocation (THOW/HFVN/FDRV/GSSG)
-
-* Aggregate neighborhood ARI → budget under **NBERS** → allocate energy/shelter/mobility.
-
-### C. Governance (CBGMODD)
-
-* Ombudsman review of EPIR‑Q decisions; GraceChain audit; policy refinement via **GAIA SOMT**.
-
----
-
-## Data, Privacy & Security
-
-* **Minimal capture, maximal utility:** collect only what’s needed for remediation/learning.
-* **Edge preprocessing:** sensitive signals reduced to features at the edge.
-* **Zero‑knowledge attestations:** prove *alignment* without revealing raw biometrics.
-* **Separation of duties:** SECUIR zones by role and purpose; public vs custodial data.
-
----
-
-## Roadmap
-
-* [ ] Reference signals pack (synthetic + anonymized)
-* [ ] WASM policy bundles for priority verticals
-* [ ] Meritcoin testnet + GraceChain anchoring kit
-* [ ] VERTECA Studio: HFVN voice intents & AR overlays
-* [ ] Smart‑City demo: THOW energy market on GSSG substrate
-
-See [`docs/ROADMAP.md`](./docs/ROADMAP.md) (coming soon).
-
----
-
-## Contributing
-
-We welcome issues, PRs, and domain playbooks. Please:
-
-1. Open an issue describing the improvement.
-2. Include acceptance criteria & a brief test plan.
-3. Follow the coding standards in [`docs/CONTRIBUTING.md`](./docs/CONTRIBUTING.md) (coming soon).
-
-> **Ethical note:** Contributions must respect **CARE** (Community, Actuation, Regeneration, Equity) and the two cybernetic rules.
-
----
-
-## License
-
-**CARE Commons Attribution License (CCAL) v2.1**
-You may use, adapt, and redistribute this work with attribution and duty of care. Commercial use is allowed if aligned with CARE principles and accompanied by auditability and non‑punitive remediation access. See [`LICENSE`](./LICENSE).
-
----
-
-## Credits
-
-* **Author/Steward:** Joseph A. Sprute (ERES Institute)
-* **AI Collaboration:** ChatGPT (OpenAI), DeepSeek, Claude.ai, others as noted in commit history.
-* **Community:** PlayNAC contributors and reviewers across the ERES ecosystem.
-
----
-
-## References
-
-* ERES Projects Index (Substack)
-* ARI Application Framework (draft)
-* UBIMIA, GCF, NBERS specifications
-* Smart‑City migration notes (THOW, HFVN, FDRV, GSSG)
-* CARE & GAIA SOMT policy memos
-
-> Link out to public posts/papers as they are added to `/docs/REFERENCES.md`.
-
----
-
-### Appendix: Glossary (selected)
-
-* **ARI:** Aura Resonance Index (`K × F + M`).
-* **EPIR‑Q:** Ethical/Policy judge & normalizer.
-* **UBIMIA:** UBI + Merit × Investments ± Awards.
-* **NPR:** Non‑Punitive Remediation.
-* **SECUIR:** Isolation & assurance architecture.
-* **VERTECA:** Voice/VR/AR interface layer (HFVN).
-* **CyberRAVE:** Industry simulations (72 verticals).
-* **Gunnysack:** Circular goods/services marketplace.
-* **NBERS:** National Bio‑Ecologic Resource Score.
-* **GERP:** Global Earth Resource Planning.
-* **CARE:** Community, Actuation, Regeneration, Equity.
-* **CBGMODD:** Citizen, Business, Government, Ombudsman, Military, Dignitary, Diplomat.
+## 🏗️ Architecture
 
 ```
+┌─────────────────────────────────────────────────────────────┐
+│                    PlayNAC KERNEL                           │
+├─────────────────────────────────────────────────────────────┤
+│  VERTECA Interface (Voice/Gesture) ──┐                     │
+│                                       │                     │
+│  ┌─────────────────────────────────────▼─────────────────┐  │
+│  │              Core Orchestrator                       │  │
+│  │  ┌─────────────┬─────────────┬─────────────────────┐  │  │
+│  │  │ EarnedPath  │    GERP     │      BERC          │  │  │
+│  │  │   Engine    │  Resource   │   Bio-Ecologic     │  │  │
+│  │  │             │  Planning   │     Scoring        │  │  │
+│  │  └─────────────┴─────────────┴─────────────────────┘  │  │
+│  │                                                       │  │
+│  │  ┌─────────────────────────────────────────────────┐  │  │
+│  │  │        GAIA Semantic Matrix (17×7)             │  │  │
+│  │  │     Intent Routing & Consensus Engine          │  │  │
+│  │  └─────────────────────────────────────────────────┘  │  │
+│  └─────────────────────────────────────────────────────────┘  │
+│                                                               │
+│  ┌─────────────────────────────────────────────────────────┐  │
+│  │                Storage Layer                            │  │
+│  │  SQLite: Projects | Reviews | Skills | Biometrics     │  │
+│  └─────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────┘
 ```
+
+### Key Components
+
+| Component | Purpose | Status |
+|-----------|---------|--------|
+| **EarnedPath Engine** | PERT/CPM-aware skill progression with merit-based unlocks | ✅ Core |
+| **GERP Integration** | Global/spatial resource planning and simulation hooks | 🔄 Active |
+| **BERC Scoring** | Bio-Ecologic Ratings for footprint tracking | 🔄 Active |
+| **VERTECA (HFVN)** | Hands-free voice/gesture navigation for 4D environments | ⚠️ Beta |
+| **BEST Checkout** | Bio-Electric-Signature-Time-Sound authentication flow | 🔄 Active |
+| **GAIA Matrix** | 17×7 semantic matrix for intent routing and governance | ✅ Core |
+
+---
+
+## 📁 Project Structure
+
+```
+PlayNAC-KERNEL/
+├── src/
+│   ├── kernel/           # Core orchestrator and task management
+│   ├── ep/              # EarnedPath graph engine and rules
+│   ├── gerp/            # GERP client and spatial dynamics
+│   ├── berc/            # Bio-ecologic scoring system
+│   ├── hfvn/            # VERTECA voice/gesture interface
+│   ├── auth/            # Biometric and proof-of-human adapters
+│   ├── storage/         # SQLite adapters and migrations
+│   └── utils/           # Logging, exceptions, configuration
+├── docs/
+│   ├── architecture/    # System diagrams and sequence charts
+│   ├── api/            # API documentation
+│   └── deployment/     # Deployment guides
+├── examples/
+│   ├── demo_kernel.py   # Quick start demonstration
+│   └── tutorials/       # Step-by-step guides
+├── tests/               # Unit and integration tests
+└── requirements.txt
+```
+
+---
+
+## 🔐 Security & Authentication
+
+### Proof-of-Human System
+
+PlayNAC implements a multi-layered human verification system:
+
+- **Biometric Authentication:** Heartbeat and voice liveness detection
+- **BEST Checkout Flow:** Bio + Electric + Signature + Time + Sound verification
+- **Session Management:** Cached authentication with configurable timeouts
+- **Privacy Protection:** Local processing with encrypted data transmission
+
+### Data Sovereignty
+
+- **Local Storage:** All personal data remains on local devices
+- **Encrypted Communication:** End-to-end encryption for network operations  
+- **Audit Trails:** Comprehensive logging with privacy-preserving analytics
+- **Right to Disconnect:** Complete data deletion and system exit capabilities
+
+---
+
+## 🧩 Core Modules
+
+### EarnedPath Engine
+```python
+# Binary skill progression with prerequisite validation
+from src.ep import EarnedPathEngine
+
+engine = EarnedPathEngine()
+skill_node = engine.create_skill("Python Programming", 
+                                prerequisites=["Basic Logic", "Mathematics"],
+                                competency_threshold=0.8)
+```
+
+### GERP Resource Planning
+```python
+# Spatial resource optimization
+from src.gerp import GERPClient
+
+client = GERPClient()
+forecast = client.forecast_resources(
+    location=(lat, lon),
+    timeframe="30days",
+    resources=["water", "energy", "food"]
+)
+```
+
+### BERC Ecological Scoring
+```python
+# Environmental impact calculation
+from src.berc import BERCScorer
+
+scorer = BERCScorer()
+impact_score = scorer.calculate_footprint(
+    activities=user_activities,
+    location=user_location,
+    timeframe="monthly"
+)
+```
+
+---
+
+## 🛣️ Roadmap
+
+### Phase 1: Foundation Hardening (Current)
+- [ ] **Testing:** Achieve ≥95% unit test coverage
+- [ ] **CI/CD:** Automated testing and deployment pipeline
+- [ ] **Documentation:** Comprehensive API and user guides
+- [ ] **Security:** Vulnerability scanning and audit trails
+- [ ] **Performance:** Optimization and load testing
+
+### Phase 2: Advanced Integrations (Q1 2026)
+- [ ] **EEG Integration:** Muse/OpenBCI support via AuraScanner
+- [ ] **VR/AR Interface:** Unity-based VERTECA environments
+- [ ] **Multi-Language ASR:** Expanded voice recognition backends
+- [ ] **Mobile Clients:** iOS/Android companion applications
+
+### Phase 3: Ecosystem Expansion (Q2-Q3 2026)
+- [ ] **Distributed Deployment:** Docker Compose and Kubernetes support
+- [ ] **API Gateway:** External service integration framework
+- [ ] **Community Governance:** Decentralized decision-making tools
+- [ ] **Advanced Analytics:** ML-powered insights and predictions
+
+### Phase 4: Planetary Scale (Q4 2026+)
+- [ ] **Federation Protocol:** Inter-community coordination
+- [ ] **Crisis Response:** Emergency management and resource sharing
+- [ ] **Ecological Integration:** Real-time environmental monitoring
+- [ ] **Educational Platform:** Global skill-sharing network
+
+---
+
+## 📊 Version History
+
+| Version | Key Features | Status |
+|---------|-------------|--------|
+| **V7.2** | Simplified kernel, proof-of-human, expert advisors | ✅ Current |
+| **V7.0** | Expanded EP nodes, JAS links, GAIA domains | 📚 Archive |
+| **V4.0** | Full system documentation, quantum stability | 📚 Archive |
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from developers, researchers, and domain experts!
+
+### Getting Started
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Run tests** (`python -m pytest tests/`)
+4. **Commit** changes (`git commit -m 'Add amazing feature'`)
+5. **Push** to branch (`git push origin feature/amazing-feature`)
+6. **Open** a Pull Request
+
+### Development Guidelines
+- Follow PEP 8 style guidelines
+- Write comprehensive unit tests
+- Update documentation for new features
+- Ensure backward compatibility
+- Add type hints for all new code
+
+### Areas We Need Help
+- 🧪 **Testing:** Unit and integration test development
+- 📱 **Mobile:** iOS/Android client applications  
+- 🌐 **Web:** React/Vue.js frontend interfaces
+- 🔬 **Research:** Cybernetics and complexity science
+- 📝 **Documentation:** Technical writing and tutorials
+- 🎨 **UX/UI:** Human-centered design improvements
+
+---
+
+## 📚 Related Research
+
+### Academic Papers
+- [Bio-Cybernetic Integration Framework](docs/research/bio-cybernetic-framework.md)
+- [Defensive Relevance Protocol](docs/research/def-rel-protocol.md)
+- [Semantic Perception in AI Systems](docs/research/semantic-perception.md)
+
+### Implementation Guides
+- [Blueprint for Civilization II](docs/blueprints/civilization-ii.md)
+- [Law Enforcement Biometric Checkout](docs/blueprints/law-enforcement.md)
+- [BEST Authentication System](docs/blueprints/best-auth.md)
+
+---
+
+## 📄 License
+
+This project is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** License.
+
+You are free to:
+- **Share** — copy and redistribute in any medium or format
+- **Adapt** — remix, transform, and build upon the material
+
+Under the following terms:
+- **Attribution** — You must give appropriate credit to ERES Institute
+
+See the [LICENSE](LICENSE) file for full details.
+
+---
+
+## 🙏 Acknowledgments
+
+**Author:** Joseph A. Sprute (ERES Institute for New Age Cybernetics)  
+**Contributors:** Open-source community and research partners  
+**Advisory Board:** GAIA-aligned domain leaders and peer reviewers  
+
+### Special Thanks
+- Research collaborators in cybernetics and complexity science
+- Open-source communities providing foundational technologies
+- Beta testers and early adopters providing crucial feedback
+- Academic institutions supporting interdisciplinary research
+
+---
+
+## 🆘 Support
+
+### Community
+- **Discord:** [ERES Community Server](https://discord.gg/eres-institute)
+- **Forums:** [Community Discussions](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/discussions)
+- **Wiki:** [Knowledge Base](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/wiki)
+
+### Issues & Support
+- **Bug Reports:** [GitHub Issues](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/issues)
+- **Feature Requests:** [GitHub Discussions](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/discussions)
+- **Email:** eresmaestro@gmail.com
+
+---
+
+<div align="center">
+
+**🌟 Star this repository if you find it useful! 🌟**
+
+*Building the future of human-AI collaboration, one decision at a time.*
+
+</div>
