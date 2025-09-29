@@ -1,4 +1,4 @@
-markdown
+
 # 🎮 PlayNAC Kernel
 
 > **Core Engine for Gamified New Age Cybernetics Implementation**  
@@ -472,4 +472,3 @@ https://img.shields.io/badge/ERES-Institute_for_New_Age_Cybernetics-green.svg
 https://img.shields.io/badge/PlayNAC-Gamified_Transformation-purple.svg
 https://img.shields.io/badge/License-CCAL%2520v2.1-blue.svg
 
-text
