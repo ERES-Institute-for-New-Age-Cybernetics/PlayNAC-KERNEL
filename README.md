@@ -1,91 +1,95 @@
-🎮 PlayNAC Kernel
-Core Engine for Gamified New Age Cybernetics Implementation
-Transforming Civilization-Scale Transformation into Engaging, Accessible Experiences
+markdown
+# 🎮 PlayNAC Kernel
 
-https://img.shields.io/badge/License-CCAL%2520v2.1-green.svg
-https://img.shields.io/badge/Status-Active%2520Development-blue.svg
-https://img.shields.io/badge/Integration-NAC%2520v2.x-purple.svg
-https://img.shields.io/badge/Version-0.1.0--alpha-orange.svg
+> **Core Engine for Gamified New Age Cybernetics Implementation**  
+> *Transforming Civilization-Scale Transformation into Engaging, Accessible Experiences*
 
-Author: Joseph A. Sprute
-Institution: ERES Institute for New Age Cybernetics
-Mission: Making New Age Cybernetics accessible through gamification and interactive learning
+[![License: CCAL v2.1](https://img.shields.io/badge/License-CCAL%20v2.1-green.svg)](./LICENSE.md)
+[![Status: Active Development](https://img.shields.io/badge/Status-Active%20Development-blue.svg)]()
+[![NAC Integration](https://img.shields.io/badge/Integration-NAC%20v2.x-purple.svg)]()
+[![Version](https://img.shields.io/badge/Version-0.1.0--alpha-orange.svg)]()
 
-🎯 Introduction
-PlayNAC Kernel is the core engine powering the gamification layer of the New Age Cybernetics ecosystem. This repository contains the foundational codebase, game mechanics, and integration protocols that transform complex NAC concepts into engaging, accessible experiences for communities worldwide.
+**Author:** Joseph A. Sprute  
+**Institution:** ERES Institute for New Age Cybernetics  
+**Mission:** Making New Age Cybernetics accessible through gamification and interactive learning
 
-Built on the principles of progressive disclosure and experiential learning, PlayNAC makes civilization-scale transformation feel like an adventure rather than an academic exercise. The kernel serves as the bridge between theoretical frameworks and practical implementation, driving adoption through motivation, achievement, and community collaboration.
+---
 
-Core Philosophy
-"The most profound transformations happen when people are having fun."
+## 🎯 Introduction
+
+**PlayNAC Kernel** is the core engine powering the gamification layer of the New Age Cybernetics ecosystem. This repository contains the foundational codebase, game mechanics, and integration protocols that transform complex NAC concepts into engaging, accessible experiences for communities worldwide.
+
+Built on the principles of **progressive disclosure** and **experiential learning**, PlayNAC makes civilization-scale transformation feel like an adventure rather than an academic exercise. The kernel serves as the bridge between theoretical frameworks and practical implementation, driving adoption through motivation, achievement, and community collaboration.
+
+### Core Philosophy
+
+> "The most profound transformations happen when people are having fun."
 
 PlayNAC embodies the belief that serious change doesn't require solemnity. By wrapping NAC implementation in compelling game mechanics, we accelerate adoption, deepen understanding, and build resilient communities through shared purpose and achievement.
 
-🏗️ Architecture Overview
-text
+---
+
+## 🏗️ Architecture Overview
 ┌─────────────────────────────────────────────────────────────┐
-│                    PlayNAC Ecosystem                        │
+│ PlayNAC Ecosystem │
 ├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
-│  │   Quest     │  │ Achievement │  │  Community  │         │
-│  │   Engine    │  │   System    │  │   Hub       │         │
-│  └─────────────┘  └─────────────┘  └─────────────┘         │
-│          │               │               │                 │
-│  ┌───────────────────────────────────────────────────────┐ │
-│  │                  CORE KERNEL                          │ │
-│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐  │ │
-│  │  │ Game     │ │ NAC      │ │ Progress │ │ Social   │  │ │
-│  │  │ Logic    │ │ Adapter  │ │ Tracker  │ │ Graph    │  │ │
-│  │  │ Engine   │ │ Layer    │ │          │ │ Engine   │  │ │
-│  │  └──────────┘ └──────────┘ └──────────┘ └──────────┘  │ │
-│  └───────────────────────────────────────────────────────┘ │
-│          │               │               │                 │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
-│  │   NAC       │  │   External  │  │   Data      │         │
-│  │  Protocols  │  │   Services  │  │   Sources   │         │
-│  │ (SROC/ARI)  │  │  (Oracle)   │  │  (Sensors)  │         │
-│  └─────────────┘  └─────────────┘  └─────────────┘         │
+│ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ │
+│ │ Quest │ │ Achievement │ │ Community │ │
+│ │ Engine │ │ System │ │ Hub │ │
+│ └─────────────┘ └─────────────┘ └─────────────┘ │
+│ │ │ │ │
+│ ┌───────────────────────────────────────────────────────┐ │
+│ │ CORE KERNEL │ │
+│ │ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ │ │
+│ │ │ Game │ │ NAC │ │ Progress │ │ Social │ │ │
+│ │ │ Logic │ │ Adapter │ │ Tracker │ │ Graph │ │ │
+│ │ │ Engine │ │ Layer │ │ │ │ Engine │ │ │
+│ │ └──────────┘ └──────────┘ └──────────┘ └──────────┘ │ │
+│ └───────────────────────────────────────────────────────┘ │
+│ │ │ │ │
+│ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ │
+│ │ NAC │ │ External │ │ Data │ │
+│ │ Protocols │ │ Services │ │ Sources │ │
+│ │ (SROC/ARI) │ │ (Oracle) │ │ (Sensors) │ │
+│ └─────────────┘ └─────────────┘ └─────────────┘ │
 └─────────────────────────────────────────────────────────────┘
-🎮 Core Components
-1. Quest Engine
-Interactive Learning Modules - Gamified education on NAC principles
 
-Implementation Quests - Real-world NAC deployment as collaborative missions
+text
 
-Progressive Complexity - Scaffolded learning from basic to advanced concepts
+---
 
-Multi-format Content - Text, video, interactive simulations, AR experiences
+## 🎮 Core Components
 
-2. Achievement System
-Skill Badges - Mastery-based recognition for NAC competencies
+### 1. Quest Engine
+- **Interactive Learning Modules** - Gamified education on NAC principles
+- **Implementation Quests** - Real-world NAC deployment as collaborative missions
+- **Progressive Complexity** - Scaffolded learning from basic to advanced concepts
+- **Multi-format Content** - Text, video, interactive simulations, AR experiences
 
-Resonance Rewards - ARI/ERI-based achievement unlocks
+### 2. Achievement System
+- **Skill Badges** - Mastery-based recognition for NAC competencies
+- **Resonance Rewards** - ARI/ERI-based achievement unlocks
+- **Community Milestones** - Collective progress celebrations
+- **EarnedPath Integration** - CPM × WBS + PERT progression tracking
 
-Community Milestones - Collective progress celebrations
+### 3. Social Graph Engine
+- **Collaboration Networks** - Team formation for implementation quests
+- **Knowledge Sharing** - Peer-to-peer learning and mentorship
+- **Community Challenges** - Collective action with resonance rewards
+- **Reputation System** - Trust and expertise quantification
 
-EarnedPath Integration - CPM × WBS + PERT progression tracking
+### 4. NAC Adapter Layer
+- **SROC Integration** - Environmental credit gamification
+- **ARI/ERI Bridge** - Resonance metrics as game mechanics
+- **UBIMIA Interface** - Economic system integration
+- **Governance Protocols** - SOMT and ECVS participation
 
-3. Social Graph Engine
-Collaboration Networks - Team formation for implementation quests
+---
 
-Knowledge Sharing - Peer-to-peer learning and mentorship
+## 🚀 Quick Start
 
-Community Challenges - Collective action with resonance rewards
-
-Reputation System - Trust and expertise quantification
-
-4. NAC Adapter Layer
-SROC Integration - Environmental credit gamification
-
-ARI/ERI Bridge - Resonance metrics as game mechanics
-
-UBIMIA Interface - Economic system integration
-
-Governance Protocols - SOMT and ECVS participation
-
-🚀 Quick Start
-Prerequisites
-bash
+### Prerequisites
+```bash
 Node.js 18+ 
 Python 3.8+
 PostgreSQL 12+
@@ -467,3 +471,5 @@ Full ecosystem maturity
 https://img.shields.io/badge/ERES-Institute_for_New_Age_Cybernetics-green.svg
 https://img.shields.io/badge/PlayNAC-Gamified_Transformation-purple.svg
 https://img.shields.io/badge/License-CCAL%2520v2.1-blue.svg
+
+text
