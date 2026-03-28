@@ -1,710 +1,427 @@
-# 🎮 PlayNAC KERNEL
+# PlayNAC-KERNEL
 
-> **Core Engine for Gamified New Age Cybernetics Implementation**  
-> *Transforming Civilization-Scale Transformation into Engaging, Accessible Experiences*
+> **Comprehensive Research Archive for New Age Cybernetics**
+> *"Don't hurt yourself. Don't hurt others. Build for generations to come."*
 
-[![License: CCAL v2.1](https://img.shields.io/badge/License-CCAL%20v2.1-green.svg)](LICENSE.md)
-[![Status: Active Development](https://img.shields.io/badge/Status-Active%20Development-blue.svg)](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL)
-[![NAC Integration](https://img.shields.io/badge/Integration-NAC%20v2.x-purple.svg)](https://github.com/ERES-Institute-for-New-Age-Cybernetics)
-[![Version](https://img.shields.io/badge/Version-0.1.0--alpha-orange.svg)](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL)
+[![License: CCAL v2.1](https://img.shields.io/badge/License-CCAL%20v2.1-green.svg)](#license)
+[![Research Status](https://img.shields.io/badge/Status-Open%20Research-blue.svg)](https://github.com/ERES-Institute-for-New-Age-Cybernetics)
+[![Publications](https://img.shields.io/badge/ResearchGate-300%2B%20Publications-brightgreen.svg)](https://www.researchgate.net/profile/Joseph-Sprute/research)
+[![Commits](https://img.shields.io/badge/Commits-365%2B-orange.svg)](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL/commits/main/)
 
-**Author:** Joseph A. Sprute  
-**Institution:** ERES Institute for New Age Cybernetics  
-**Mission:** Making New Age Cybernetics accessible through gamification and interactive learning  
-**Repository:** [github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL)
-
----
-
-## 🎯 Introduction
-
-**PlayNAC Kernel** is the core engine powering the gamification layer of the New Age Cybernetics ecosystem. This repository contains foundational frameworks, comprehensive theoretical documents, and extensive PDF research that transforms complex NAC concepts into engaging, accessible experiences for communities worldwide.
-
-Built on principles of **progressive disclosure** and **experiential learning**, PlayNAC makes civilization-scale transformation feel like an adventure rather than an academic exercise. The kernel serves as the bridge between theoretical frameworks and practical implementation, driving adoption through motivation, achievement, and community collaboration.
-
-### Core Philosophy
-
-> "The most profound transformations happen when people are having fun."
-
-PlayNAC embodies the belief that serious change doesn't require solemnity. By wrapping NAC implementation in compelling game mechanics, we accelerate adoption, deepen understanding, and build resilient communities through shared purpose and achievement.
-
-### Repository Contents
-
-This repository contains **216 commits** of comprehensive research documentation including:
-
-- **Core NAC Framework Documents** - Foundational papers on New Age Cybernetics principles
-- **ARI/ERI Research** - Aura and Emission Resonance Index development
-- **SROC Specifications** - Smart Registered Offset Contracts documentation  
-- **Governance Frameworks** - SOMT, ECVS, and ethical decision-making systems
-- **Economic Models** - UBIMIA, Meritcoin, and GERP Vacationomics research
-- **Implementation Guides** - Migration plans, roadmaps, and deployment strategies
-- **Technical Briefs** - GSSG, Talonics, and infrastructure specifications
-- **Philosophical Foundations** - Core principles and ethical frameworks
+**Author:** Joseph A. Sprute (ERES Maestro)
+**Organization:** [ERES Institute for New Age Cybernetics](https://github.com/ERES-Institute-for-New-Age-Cybernetics)
+**Established:** February 2012 · Bella Vista, Arkansas
+**Co-Author:** SYU JIA WUN (independent researcher, Taiwan)
+**Contact:** eresmaestro@gmail.com
 
 ---
 
-## 🏗️ Architecture Overview
+## Overview
+
+**PlayNAC-KERNEL** is the comprehensive PDF research archive of the ERES Institute for New Age Cybernetics — the most extensively committed repository in the ERES GitHub organization (365+ commits, 216+ documents). It contains the full PDF corpus spanning 2012–2026: thesis documents, white papers, partnership proposals, philosophical analyses, technical specifications, conference submissions, and foundational research.
+
+This is the **PDF companion** to [Proof-of-Work_MD](https://github.com/ERES-Institute-for-New-Age-Cybernetics/Proof-of-Work_MD) (the Markdown specification archive). Together, these two repositories constitute the complete proof-of-work record for the ERES framework.
+
+> **Note on repository name:** Despite referencing "Codebase," the contents are primarily PDF research documents. The PlayNAC KERNEL codebase artifacts exist as archived packages within [Gracechain-Meritcoin](https://github.com/ERES-Institute-for-New-Age-Cybernetics/Gracechain-Meritcoin) (`ERESPlayNACKERNELCodebaseV1.zip`).
+
+---
+
+## What Is New Age Cybernetics?
+
+**New Age Cybernetics (NAC)** is a unified architecture for civilization-scale problem solving that synthesizes engineering, governance, economics, data integrity, energy systems, and adaptive education under a single equation set. It is not a business — it is an open research program delivered "relatively free" via UBIMIA economics, published under the CARE Commons Attribution License v2.1 (CCAL).
+
+NAC integrates:
+
+- **Resonance Metrics** (BERA: ARI, ERI, RHC, RCI) for measuring harmony between human activity and planetary health
+- **Merit-Based Economics** (UBIMIA, Meritcoin Proof-of-Resonance) that reward contribution over capital
+- **Ethical Governance** (SOMT, ECVS, GSSG) with transparent sociocratic decision-making
+- **Data Integrity Architecture** (FAVORS, CBGMODD) for fault-tolerant verification
+- **Adaptive Certification** (SCALULAR: HEALTH, LAW, PROTECTION, SKILLS/TRADE) for lifelong learning
+- **Gamified Engagement** (PlayNAC, EPIR-Q) making transformation accessible
+- **Propulsion Engineering** (ESVRD, FDRV) validated at civilization and interstellar scale
+
+### The Foundational Equations (Triune Math)
+
+1. **C = R × P / M** — Cybernetics = Resource × Purpose ÷ Method
+2. **M × E + C = R** — Matter × Energy + Constant = Reason
+3. **REAL = (E · M · R) / (T · S)** — Energy · Matter · Resonance / Time · Space *(no repeated letters)*
+
+Every document in this archive derives from or contributes to this equation set.
+
+---
+
+## The ERES Trilogy: BEST / SOUND / GOOD
+
+The corpus is organized around a moral vectoring principle mapped onto three developmental stages called **Personal / Public-Private Graceful Evolution**. The Trilogy reads as a single engineering argument in three movements:
+
+### Book 1: One Good — BEST / Personal Graceful Evolution
+
+The individual's economic liberation through universal basic infrastructure. Without BEST, institutional reform (SOUND) has no constituency — citizens trapped in survival anxiety cannot participate in governance.
+
+**Core instruments:** UBIMIA (Universal Basic Infrastructure, Meritcoin Incentivized Architecture), Meritcoin Proof-of-Resonance, 401(k) Soft Landing, EarnedPath adaptive credentialing (EP = CPM × WBS + PERT), PlayNAC KERNEL gamified engagement.
+
+### Book 2: Security-Clearance — SOUND / Public-Private Graceful Evolution
+
+The institutional trust architecture. Without SOUND, data integrity (GOOD) has no deployment path — verification instruments need trustworthy institutions to deploy into.
+
+**Core instruments:** IDIPITIS (identity without surveillance), NBERS (economic security), GSSG (Global Sustainable Systems Governance), NPR (National Priorities Realignment), SCALULAR Engine (10-part, 323-paragraph perpetual legal instrument), SROC (Smart-Resonant Offset Contracts), Storm Party political architecture.
+
+### Book 3: Data-Integrity — GOOD / Graceful Evolution Verified
+
+The technical substrate that makes BEST and SOUND falsifiable. Without GOOD, the other two books are unfalsifiable claims.
+
+**Core instruments:** FAVORS fault-tolerant data architecture, CBGMODD stateful taxonomy, GAIA-SOMT (Global Adaptive Infrastructure Architecture with Sociocratic Overlay Metadata Tapestry), BERA resonance metrics, ESVRD propulsion (anchored to Hyland 2025 epitaxial semiconductor data), MIEVM epistemological validation.
+
+**The combination is the deployment sequence:** liberate the person (BEST) → reform the institution (SOUND) → verify the claim (GOOD).
+
+---
+
+## Thesis Documents (Reading Order)
+
+The core of this archive is the ERES Trilogy in thesis format, numbered for sequential reading:
+
+| # | File | Trilogy Position |
+|---|------|-----------------|
+| 00 | `00_MASTER_THESES_OVERVIEW.pdf` | Master overview — reading guide for all three theses |
+| 01 | `01_THESIS_ONE_GOOD_UBIMIA.pdf` | **Book 1: One Good** — BEST / Personal |
+| 02 | `02_THESIS_SECURITY_CLEARANCE_IDIPITIS_NBERS_REVISED.pdf` | **Book 2: Security-Clearance** — SOUND / Public-Private (revised) |
+| 02 | `02_THESIS_SECURITY_CLEARANCE_IPIDITIS_NBERS.pdf` | Book 2 — original version |
+| 03 | `03_THESIS_DATA_INTEGRITY_FAVORS_CBGMODD_GAIA_SOMT.pdf` | **Book 3: Data-Integrity** — GOOD / Verification |
+
+Also available as individual book PDFs:
+
+| File | Description |
+|------|-------------|
+| `Book1_One_Good_UBIMIA.docx.pdf` | Book 1 — DOCX-sourced PDF |
+| `Book2_Security_Clearance_IDIPITIS_NBERS.docx.pdf` | Book 2 — DOCX-sourced PDF |
+| `Book3_Data_Integrity_FAVORS_CBGMODD_GAIA_SOMT.docx.pdf` | Book 3 — DOCX-sourced PDF |
+
+---
+
+## Archive Contents by Domain
+
+### Resonance Metrics & BERA
+
+Research on the four BERA (Bioenergetic Resonance Architecture) indices that form the basis of Proof-of-Resonance economics.
+
+| File | Description |
+|------|-------------|
+| `BERA_Complete_Report.pdf` | Complete BERA specification and research |
+| `BERA_Complete_Report(1).pdf` | BERA complete report (updated version) |
+| `BIO-ELECTRIC SIGNATURE ARCHITECTURE_.pdf` | Bio-electric signature framework |
+| `Bio-Cybernetics Integration Framework.pdf` | Bio-cybernetics integration |
+
+**BERA Resonance Indices:**
+- **ARI** — Aura Resonance Index (multidimensional coherence)
+- **ERI** — Emission Resonance Index (ecological impact)
+- **RHC** — Resonant Harmony Cycle *(not Cybernetics)* — systemic harmony measure
+- **RCI** — Resonant Continuity Index (RCI = P_Ω_norm × ARI_sys × VibConst, co-developed with Jimmy D. Butzbach)
+
+These feed directly into Meritcoin value accrual as a closed feedback loop: ethical and ecological harmony IN, economic value OUT. *"It's not mining — it's tuning."*
+
+### PlayNAC & Engagement Architecture
+
+The gamified implementation layer that makes civilization-scale transformation accessible and engaging.
+
+| File | Description |
+|------|-------------|
+| `Configuring Civilization through PlayNAC.pdf` | Foundational PlayNAC architecture — how gamification serves civilizational evolution |
+| `Continuity Protocol Alpha.pdf` | Continuity protocol specification |
+
+### Partnership & Outreach Proposals
+
+Evidence of sustained engagement with energy companies, international organizations, and government entities.
+
+| File | Description |
+|------|-------------|
+| `Atom Global White Paper.pdf` | Atom Global energy sector partnership |
+| `Atom Usa Global Proposal.pdf` | Atom USA partnership proposal |
+| `Chevron_Package_JAS_Consolidated.pdf` | Chevron energy sector proposal |
+| `Becoming_Open_Capacity_Building_and_Community_Collaboration_in_the_Arab_World_through_Open_Science_Principles.pdf` | Arab World capacity building through open science |
+| `Architectural_Proposal_for_Boundaryless.pdf` | Boundaryless architecture proposal |
+| `A Letter from ERES to the World v1.1.pdf` | Public letter — ERES mission statement |
+
+### Philosophical & Analytical Foundations
+
+The epistemological and philosophical foundations underlying the engineering framework.
+
+| File | Description |
+|------|-------------|
+| `Analysis_of_Key_Philosophical_Concepts_in_ERES_New_Age_Cybernetics.pdf` | Philosophical analysis of NAC core concepts |
+| `A Preventive Framework for Planetary Collision Avoidance and Resonance Homeostasis.pdf` | Planetary resilience through resonance homeostasis |
+
+### 666 Analysis & 6th Extinction
+
+Systematic analysis of interlocking systems failure and the 6th extinction alarm framework.
+
+| File | Description |
+|------|-------------|
+| `666_analysis_report.pdf` | 666 interlocking systems analysis |
+| `6th_extinction_alarm_proposal.pdf` / `(1).pdf` | 6th Extinction alarm proposals |
+| `6th_extinction_v2.0_complete.pdf` | 6th Extinction v2.0 complete |
+
+### Reference
+
+| File | Description |
+|------|-------------|
+| `03_Proof-of-Work_MD_README_v2.md.pdf` | PDF version of the Proof-of-Work_MD repository README |
+
+> **Note:** The files listed above represent a subset of the 216+ documents in this archive. The full inventory can be browsed via the GitHub file listing.
+
+---
+
+## Ecosystem Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                   PlayNAC ECOSYSTEM                         │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐          │
-│  │   Quest     │ │ Achievement │ │  Community  │          │
-│  │   Engine    │ │   System    │ │    Hub      │          │
-│  └─────────────┘ └─────────────┘ └─────────────┘          │
-│         │               │               │                  │
-│  ┌───────────────────────────────────────────────────┐    │
-│  │               CORE KERNEL                         │    │
-│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐          │    │
-│  │  │   Game   │ │   NAC    │ │ Progress │          │    │
-│  │  │  Logic   │ │ Adapter  │ │ Tracker  │          │    │
-│  │  │  Engine  │ │  Layer   │ │          │          │    │
-│  │  └──────────┘ └──────────┘ └──────────┘          │    │
-│  │  ┌──────────┐ ┌────────────────────────────────┐ │    │
-│  │  │  Social  │ │   Research Documentation       │ │    │
-│  │  │  Graph   │ │   (216+ PDFs & Framework Docs) │ │    │
-│  │  │  Engine  │ │                                │ │    │
-│  │  └──────────┘ └────────────────────────────────┘ │    │
-│  └───────────────────────────────────────────────────┘    │
-│         │               │               │                  │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐          │
-│  │    NAC      │ │  External   │ │    Data     │          │
-│  │  Protocols  │ │  Services   │ │   Sources   │          │
-│  │ (SROC/ARI)  │ │  (Oracle)   │ │  (Sensors)  │          │
-│  └─────────────┘ └─────────────┘ └─────────────┘          │
-└─────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│            ERES INSTITUTE NAC ECOSYSTEM                      │
+│                  C = R × P / M                               │
+├──────────────────────────────────────────────────────────────┤
+│                                                              │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │           BOOK 1: BEST (Personal)                    │   │
+│  │  UBIMIA · Meritcoin · EarnedPath · 401(k) Soft       │   │
+│  │  Landing · PlayNAC · Proof-of-Resonance              │   │
+│  └──────────────────────────────────────────────────────┘   │
+│                          ↓                                   │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │        BOOK 2: SOUND (Public-Private)                │   │
+│  │  IDIPITIS · NBERS · GSSG · NPR · SCALULAR ·          │   │
+│  │  SROC · Storm Party · ILO · SEPLTA                    │   │
+│  └──────────────────────────────────────────────────────┘   │
+│                          ↓                                   │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │        BOOK 3: GOOD (Graceful Evolution)             │   │
+│  │  FAVORS · CBGMODD · GAIA-SOMT · BERA (ARI/ERI/      │   │
+│  │  RHC/RCI) · ESVRD · FDRV · VLSA · MIEVM · SPT       │   │
+│  └──────────────────────────────────────────────────────┘   │
+│                                                              │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │              CROSS-CUTTING                           │   │
+│  │  Talonics · VERTECA · ECVS · PlayNAC · EPIR-Q ·      │   │
+│  │  GraceChain · PBJ Tri-Codex · CERT:TETRA             │   │
+│  └──────────────────────────────────────────────────────┘   │
+└──────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📚 Repository Structure & Key Documents
+## Key Frameworks Reference
 
-The repository contains extensive documentation organized across multiple domains:
+### Economics
 
-### 🎯 Core NAC Principles
+| Framework | Description |
+|-----------|-------------|
+| **UBIMIA** | Universal Basic Infrastructure, Meritcoin Incentivized Architecture |
+| **Meritcoin** | Proof-of-Resonance economic instrument — value from harmony, not computation |
+| **GraceChain** | Distributed trust ledger |
+| **EarnedPath** | Adaptive credentialing (EP = CPM × WBS + PERT) |
+| **SROC** | Smart-Resonant Offset Contracts — game-theoretic equilibrium analysis |
+| **401(k) Soft Landing** | Graceful wealth transition (including China Adaptation Framework) |
 
-**Foundational Documents:**
-- `ERES 10 Predominate-Interconnected NAC Truths.pdf` - Core philosophical foundations
-- `ERES Core Philosophical Framework.pdf` - Theoretical underpinnings
-- `Analysis_of_Key_Philosophical_Concepts_in_ERES_New_Age_Cybernetics.pdf`
-- `ERES Assimilating NAC.pdf` - Integration methodologies
+### Governance & Legal Engineering
 
-**Educational Materials:**
-- `A Letter from ERES to the World v1.1.pdf` - Accessible introduction
-- `ERES Institute_ Building Cybernetic Communities That Value Care.pdf`
-- `Configuring Civilization through PlayNAC.pdf`
+| Framework | Description |
+|-----------|-------------|
+| **GSSG** | Global Sustainable Systems Governance (v3.0) |
+| **NPR** | National Priorities Realignment (v3.0 FINAL with HowWay Declaration) |
+| **SCALULAR** | Scalable Certification Architecture for Lifelong Universal Learning and Adaptive Resilience — four pillars: HEALTH (SSHP), LAW (SSLA), PROTECTION (SSPS), SKILLS/TRADE (SSST) |
+| **SOMT** | Sociocratic Overlay Metadata Tapestry *(not "Strategic Optimization & Merit Tracking")* |
+| **ECVS** | Ethical Civic Voting System |
+| **ILO** | International Land Ownership — stewardship classes mapped to C=R×P/M |
 
-### 🌍 Resonance Metrics & Environmental Systems
+### Data Integrity & Infrastructure
 
-**ARI (Aura Resonance Index):**
-- `ERES ARI E-Manual V.1.pdf` & `V.2.pdf` - Comprehensive implementation manuals
-- `ERES ARI Application Framework.pdf` - Technical specifications
-- `ERES ARI Draft.pdf` - Development documentation
-- `ERES ARI Empirics.pdf` - Empirical validation methods
-- `ERES Claude ARI Report.pdf` - AI-assisted analysis
-- `ERES Aura Hypothesis.pdf` - Theoretical foundations
+| Framework | Description |
+|-----------|-------------|
+| **FAVORS** | Fault-tolerant Adaptive Validation and Operational Resilience System |
+| **CBGMODD** | Stateful Taxonomy |
+| **GAIA** | Global Adaptive Infrastructure Architecture |
+| **IDIPITIS** | Identity architecture — identity without surveillance |
+| **NBERS** | Economic security framework |
+| **MIEVM** | Multi-Instrument Ensemble Validation Method — four AI systems as parallel validation nodes |
 
-**ERI (Emission Resonance Index):**
-- `ERES Emission Resonance Index (ERI) Proposal.pdf` - Core specification
+### Propulsion & Scale Proof
 
-**Environmental Frameworks:**
-- `Bio-Cybernetics Integration Framework.pdf`
-- `ERES Biometric Signaling Physiological Synchronization.pdf`
-- `ERES Aura Olfactory.pdf` & `Aura Olfactory2.pdf` - Sensory integration
+| Framework | Description |
+|-----------|-------------|
+| **ESVRD** | Electrostatic Vibration Resonance Drive (v4.0, Hyland 2025 semiconductor data) |
+| **FDRV** | Future Design Reference Vehicle — the interstellar vessel at maximum scale |
+| **VLSA** | Validated Livable Scale Architecture — *"If it works in a THOW, it works on a generation ship"* |
 
-### 💰 Economic Systems
+### Communication & Engagement
 
-**UBIMIA & Meritcoin:**
-- `ERES Meritcoin Cryptocurrency RT Media — Chapter Outline.pdf`
-
-**GERP (Global Earth Resource Planner):**
-- `ERES Game Theory Future Map.pdf` - Strategic planning
-- `ERES Migration Plan Framework (Draft).pdf` & `(Revised).pdf`
-- `ERES Millennium Synthesis.pdf` - Long-term vision
-
-**SROC (Smart Registered Offset Contracts):**
-- `ERES GSSG Technical Brief.pdf` - Solar energy integration
-- Multiple Google Proposal documents for technical implementations
-
-### 🏛️ Governance & Coordination
-
-**Governance Protocols:**
-- `ERES AOC PAC (v1.0).pdf` - Governance structures
-- `ERES AOC ARC 001.pdf` & `PAC .pdf` - Administrative protocols
-- `ERES EMA DAL Covenant.pdf` - Decision-making frameworks
-- `ERES Covenant for Cooperative Sustainability.pdf`
-- `ERES Covenant_ Simple Rules.pdf`
-
-**Conflict Resolution:**
-- `ERES CA² Formula V1.1.pdf` through `V1.4.pdf` - Collision avoidance systems
-- `ERES CA² Trajectory Formula.pdf`
-- `ERES Formal Framework for Desire Control.pdf`
-- `Continuity Protocol Alpha.pdf`
-- `Cybernetic Witness Protocol Cwp.pdf`
-
-### 🌐 Infrastructure & Implementation
-
-**Smart City Frameworks:**
-- `ERES LOGOS for Smart-City Community.pdf` (rev.1, rev.2, original)
-- `ERES Basics_ Systems Engineering Blueprint.pdf`
-
-**GSSG (Global Solar Storage Grid):**
-- `ERES GSSG Technical Brief.pdf`
-- `ERES Institute GSSG Technical Brief .pdf`
-
-**Talonics & Communication:**
-- `ERES Article 251 v2.0_ FDRV HFVN Semiosphere PlayNAC .pdf`
-- `ERES Article 252 v2.0_ EMA VERTECA PlayNAC Perciphere EP.pdf`
-- `ERES Article 253 v2.0_ Exit GSSG Talonics Protosphere GERP.pdf`
-- `ERES HFVN_ Hands-Free Voice Navigation.pdf`
-
-**Energy Systems:**
-- `ERES Kinetic Harvesting System Complete.pdf`
-- `ERES HELP USE Energy Law.pdf`
-- `ERES HELP USE Energy Law_ A Comprehensive Differentiation.pdf`
-
-### 🔬 Technical Specifications
-
-**Implementation Frameworks:**
-- `ERES Collaboration Framework-Infrastructure (Draft).pdf`
-- `ERES System Integration Architecture v2.0.pdf` - [Note: see Proof-of-Work_MD]
-- `Architectural_Proposal_for_Boundaryless.pdf`
-- `ERES Meta-Optics Assimilation (Final).pdf`
-
-**Security & Standards:**
-- `ERES Law Enforcement_ BEST Biometric Checkout V1.0.pdf` & `V1.1.pdf`
-- `ERES DOFA 6G Immunology.pdf`
-- `ERES Molecular Modeling.pdf`
-
-**Data Classification:**
-- `ERES Classifying Empirics in Real-Time.pdf`
-- `ERES Relative-Realtime Cybernetic Classification Framework.pdf` - [Note: see Proof-of-Work_MD]
-
-### 🌏 Regional & Global Initiatives
-
-**International Proposals:**
-- `ERES Google Proposal.pdf` & related technical documents
-- `ERES MENA 2025 Submission.pdf` - Middle East/North Africa
-- `ERES 1000-Year Plan in Chinese Review.pdf`
-- `Becoming_Open_Capacity_Building_and_Community_Collaboration_in_the_Arab_World_through_Open_Science_Principles.pdf`
-
-**Strategic Partnerships:**
-- `Atom Global White Paper.pdf`
-- `Atom Usa Global Proposal.pdf`
-- `Chevron_Package_JAS_Consolidated.pdf`
-- `DALEMA_Fiduciary_Report.pdf`
-
-### 📊 Assessment & Rating Systems
-
-**Evaluation Frameworks:**
-- `ERES Rating System v1.0.pdf` & `v2.0.pdf`
-- `ERES BORDERS_ Analysis.pdf` & `v1.2.pdf`
-- `ERES Existence Resonance.pdf` & `(Draft).pdf`
-- `ERES Resonance First.pdf`
-
-**Peace & Conflict Resolution:**
-- `ERES Resonance Framework for Peace.pdf`
-- `ERES Resonance Framework for Peace_ REPORT.pdf`
-
-### 📖 Reference & Compliance
-
-- `Credits,_References,_and_License_Information.pdf`
-- `ERES Enneagram Migration Plans.pdf`
-- `ERES Final Emergency Transition Report.pdf` & `Supplemental.pdf`
-- `ERES INSTITUTE_ REAL HELP.pdf`
-- `ERES Institute _STORM PARTY_.pdf`
-- `ERES NAC AI.pdf`
+| Framework | Description |
+|-----------|-------------|
+| **PlayNAC** | Gamified engagement layer / KERNEL codebase |
+| **EPIR-Q** | Engagement protocol |
+| **Talonics** | Communication subsystem |
+| **VERTECA** | Vertical economic and resource tracking |
 
 ---
 
-## 🎮 Core Components (Implementation Vision)
+## Validation Method
 
-### 1. Quest Engine
+The ERES corpus employs the **Multi-Instrument Ensemble Validation Method (MIEVM)** — a structured epistemological protocol deploying four AI systems (Claude, Grok, DeepSeek, ChatGPT) as parallel validation nodes. MIEVM was culled from a larger original ensemble due to bandwidth constraints as a solo researcher — the same constraint-based culling epistemology that produced CyberRAVE's 72 Key Domains from the Register of Collective Indices.
 
-**Interactive Learning Modules** - Gamified education on NAC principles:
-- Progressive disclosure of complex concepts
-- Multi-format content (text, video, simulations, AR)
-- Adaptive difficulty based on learner progress
-- Community-created quest content
-
-**Implementation Quests** - Real-world NAC deployment as missions:
-- Community garden establishment
-- Local SROC participation
-- Governance system implementation
-- Infrastructure resilience projects
-
-**Progressive Complexity** - Scaffolded learning journey:
-- Beginner: NAC fundamentals and community introduction
-- Intermediate: SROC participation and governance engagement
-- Advanced: Infrastructure design and regional coordination
-
-### 2. Achievement System
-
-**Skill Badges** - Mastery-based recognition:
-- Technical competencies (programming, data analysis)
-- Community skills (facilitation, conflict resolution)
-- NAC expertise (ARI measurement, SROC validation)
-- Leadership capabilities (project management, mentorship)
-
-**Resonance Rewards** - ARI/ERI-based unlocks:
-- Enhanced system access for high resonance
-- Multiplier bonuses for aligned actions
-- Community recognition and reputation
-
-**Community Milestones** - Collective progress celebrations:
-- Regional ARI improvements
-- Collective SROC achievements
-- Governance participation thresholds
-- Infrastructure completion markers
-
-**EarnedPath Integration** - CPM × WBS + PERT progression:
-- Critical Path Method for skill sequencing
-- Work Breakdown Structure for task mapping
-- Risk-adjusted timeline planning (PERT)
-
-### 3. Social Graph Engine
-
-**Collaboration Networks** - Team formation:
-- Skill-based matchmaking
-- Project collaboration tools
-- Resource sharing mechanisms
-- Cross-community connections
-
-**Knowledge Sharing** - Peer learning:
-- Mentorship matching
-- Tutorial creation and curation
-- Q&A forums
-- Expert office hours
-
-**Community Challenges** - Collective action:
-- Regional environmental goals
-- Infrastructure development sprints
-- Governance participation drives
-- Educational milestone campaigns
-
-**Reputation System** - Trust and expertise:
-- Contribution tracking
-- Peer endorsements
-- Skill verification
-- Impact measurement
-
-### 4. NAC Adapter Layer
-
-**SROC Integration** - Environmental credit gamification:
-- Quest-based SROC participation
-- Resonance-weighted reward calculation
-- Oracle verification integration
-- Impact visualization
-
-**ARI/ERI Bridge** - Resonance as game mechanics:
-- Real-time personal ARI tracking
-- Community ERI dashboards
-- Resonance improvement quests
-- Alignment reward multipliers
-
-**UBIMIA Interface** - Economic system connection:
-- Merit-based income distribution
-- Contribution tracking
-- Resource allocation participation
-- Economic literacy modules
-
-**Governance Protocols** - SOMT and ECVS participation:
-- Decision-making tutorials
-- Voting mechanics
-- Proposal creation guides
-- Conflict resolution training
+**MIEVM operates as Instrument-of-Faith:** faith extended first, then validated by method.
 
 ---
 
-## 🚀 Getting Started with Research Documents
+## Getting Started
 
-### Prerequisites for Document Access
+### For Researchers & Academics
 
+**Start with the Trilogy:**
 ```bash
-# PDF reader (any modern PDF viewer)
-Adobe Acrobat Reader
-Foxit Reader
-Preview (macOS)
-PDF.js (web-based)
-
-# Optional: Document management
-Zotero (for research organization)
-Mendeley (for citation management)
-Obsidian (for knowledge graph building)
-Accessing Documentation
-bash
-
-Clone the repository
-
 git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL.git
 cd PlayNAC-KERNEL
+```
 
-Browse documents
+**Recommended reading order:**
+1. `00_MASTER_THESES_OVERVIEW.pdf` — orientation and reading guide
+2. `01_THESIS_ONE_GOOD_UBIMIA.pdf` — Book 1: economics and personal liberation
+3. `02_THESIS_SECURITY_CLEARANCE_IDIPITIS_NBERS_REVISED.pdf` — Book 2: governance and trust
+4. `03_THESIS_DATA_INTEGRITY_FAVORS_CBGMODD_GAIA_SOMT.pdf` — Book 3: verification and proof
+5. `Configuring Civilization through PlayNAC.pdf` — implementation vision
+6. `BERA_Complete_Report.pdf` — resonance metrics deep-dive
 
-ls -la *.pdf | sort
+**Then explore the Markdown specifications:**
+```bash
+git clone https://github.com/ERES-Institute-for-New-Age-Cybernetics/Proof-of-Work_MD.git
+```
 
-View by topic area
+### For Developers & Implementers
 
-ls ERES ARI* # All ARI-related documents
-ls ERES GSSG* # Solar grid documents
-ls *Proposal* # Partnership proposals
-Recommended Reading Path
-Phase 1: Foundations
-A Letter from ERES to the World v1.1.pdf - Introduction
-ERES Core Philosophical Framework.pdf - Theoretical basis
-ERES 10 Predominate-Interconnected NAC Truths.pdf - Core principles
-Configuring Civilization through PlayNAC.pdf - Vision overview
-Phase 2: Resonance Metrics
-ERES ARI E-Manual V.2.pdf - Comprehensive ARI guide
-ERES Emission Resonance Index (ERI) Proposal.pdf - ERI specification
-ERES Biometric Signaling Physiological Synchronization.pdf - Technical details
-Bio-Cybernetics Integration Framework.pdf - System integration
-Phase 3: Economic & Governance Systems
-ERES Meritcoin Cryptocurrency RT Media — Chapter Outline.pdf
-ERES AOC PAC (v1.0).pdf - Governance structures
-ERES Covenant for Cooperative Sustainability.pdf
-ERES Migration Plan Framework (Revised).pdf
-Phase 4: Infrastructure & Implementation
-ERES LOGOS for Smart-City Community (rev.2).pdf
-ERES GSSG Technical Brief.pdf
-ERES Basics_ Systems Engineering Blueprint.pdf
-ERES Collaboration Framework-Infrastructure (Draft).pdf
-Phase 5: Advanced Topics
-ERES CA² Formula V1.4.pdf - Conflict resolution
-ERES Article 251-253 series - Communication systems
-ERES Final Emergency Transition Report.pdf
-📊 Document Categories & Navigation
-Research Organization
-plaintext
-PlayNAC-KERNEL/
-├── Core Philosophy (22 docs)
-│ ├── NAC Principles
-│ ├── Ethical Frameworks
-│ └── Foundational Theory
-│
-├── Resonance Systems (15 docs)
-│ ├── ARI Documentation
-│ ├── ERI Specifications
-│ └── Biometric Integration
-│
-├── Economic Models (8 docs)
-│ ├── Meritcoin
-│ ├── UBIMIA
-│ └── GERP Vacationomics
-│
-├── Governance (12 docs)
-│ ├── Decision Systems
-│ ├── Conflict Resolution
-│ └── Covenant Frameworks
-│
-├── Infrastructure (18 docs)
-│ ├── LOGOS Smart Cities
-│ ├── GSSG Energy Systems
-│ ├── Communication (Talonics)
-│ └── Security Protocols
-│
-├── International (10 docs)
-│ ├── Partnership Proposals
-│ ├── Regional Initiatives
-│ └── Cultural Adaptations
-│
-├── Implementation (25 docs)
-│ ├── Migration Plans
-│ ├── Technical Briefs
-│ ├── System Integration
-│ └── Assessment Tools
-│
-└── Reference (6 docs)
-├── Credits & Licenses
-├── Emergency Protocols
-└── Comprehensive Reports
-🔍 Key Document Highlights
-Most Comprehensive Documents
-markdown
+1. Start with the architecture documents in this archive for specifications
+2. Clone [Gracechain-Meritcoin](https://github.com/ERES-Institute-for-New-Age-Cybernetics/Gracechain-Meritcoin) for the active working archive with code artifacts, connector code, and LLM collaboration outputs
+3. Review the VERTECA Genesis Phase and PlayNAC KERNEL codebase materials there
 
-Longest & Most Detailed
+### For Policy Professionals & Government Partners
 
-ERES ARI E-Manual V.2.pdf (200+ pages)
-- Complete guide to Aura Resonance Index implementation
+1. Review partnership proposals in this archive (Chevron, Atom Global, Arab World capacity building)
+2. See [Support-Documentation](https://github.com/ERES-Institute-for-New-Age-Cybernetics/Support-Documentation) for the Government Partnership Brief (7 languages), NPR v3.0, and SCALULAR Engine
+3. The [Gracechain-Meritcoin](https://github.com/ERES-Institute-for-New-Age-Cybernetics/Gracechain-Meritcoin) repo contains the NBERS Technical Implementation Guide and IDIPITIS Security Architecture
 
-ERES GSSG Technical Brief.pdf
-- Comprehensive solar grid specifications
+### For Community Organizers & Educators
 
-ERES Final Emergency Transition Report.pdf + Supplemental
-- Complete transition strategy documentation
+1. `Configuring Civilization through PlayNAC.pdf` — how gamification enables community-scale transformation
+2. `A Letter from ERES to the World v1.1.pdf` — accessible introduction to the ERES mission
+3. `Analysis_of_Key_Philosophical_Concepts_in_ERES_New_Age_Cybernetics.pdf` — philosophical foundations for teaching
 
-ERES Basics_ Systems Engineering Blueprint.pdf
-- Full technical architecture specification
-Most Frequently Updated Series
-CA² Formula Series (V1.1 → V1.4)
-LOGOS Smart City (original → rev.2)
-Articles 251-253 (v1 → v2.0)
-Core Proposals & Frameworks
-Migration Plan Framework (Draft → Revised)
-Partnership Documents for Key Organizations
-markdown
+---
 
-Google Proposals
+## Relationship to Other Repositories
 
-ERES Google 1 page Proposal.pdf
-ERES Google Proposal.pdf
-ERES Google Proposal Core Specification.pdf
-ERES Google Proposal Pseudo-Code.pdf
-ERES Institute Google Proposal.pdf
+| Repository | Format | Role | Files |
+|------------|--------|------|-------|
+| **PlayNAC-KERNEL** (this repo) | PDF | Comprehensive research archive | 216+ |
+| [Proof-of-Work_MD](https://github.com/ERES-Institute-for-New-Age-Cybernetics/Proof-of-Work_MD) | Markdown | Computer-readable specifications | 155+ |
+| [Gracechain-Meritcoin](https://github.com/ERES-Institute-for-New-Age-Cybernetics/Gracechain-Meritcoin) | MD/PDF/HTML/Python | Active working archive — frameworks, LLM collaborations, code | 80+ |
+| [Support-Documentation](https://github.com/ERES-Institute-for-New-Age-Cybernetics/Support-Documentation) | ZIP/PDF/MD | Packaged R&D — white papers, legal instruments, conference submissions | 35+ |
+| [Proof-of-Work](https://github.com/ERES-Institute-for-New-Age-Cybernetics/Proof-of-Work) | PDF | Original documents and tangential materials | — |
+| [NAC_Images](https://github.com/ERES-Institute-for-New-Age-Cybernetics/NAC_Images) | PNG | Computer-generated visualizations | — |
+| [ERES-Relativity-Equation](https://github.com/ERES-Institute-for-New-Age-Cybernetics/ERES-Relativity-Equation) | — | Triune Math development with AI collaboration | — |
+| [ZIP](https://github.com/ERES-Institute-for-New-Age-Cybernetics/ZIP) | ZIP | Compressed archives of program files | — |
+| [Discussions](https://github.com/ERES-Institute-for-New-Age-Cybernetics/Discussions) | — | Community forum | — |
+| [.github](https://github.com/ERES-Institute-for-New-Age-Cybernetics/.github) | — | Organization profile and metadata | — |
 
-Energy Sector
+---
 
-Chevron_Package_JAS_Consolidated.pdf
-Atom Global White Paper.pdf
-Atom Usa Global Proposal.pdf
+## Three Eras of Development
 
-International Initiatives
+| Era | Period | Key Activity |
+|-----|--------|--------------|
+| **CyberRAVE** | Pre-1997–2007 | Foundational work with Emanuel M. Alexiou (EMA) and Anthony Ferguson/CFAL. 72 Key Domains from constraint-based culling of the Register of Collective Indices. *Cybernetic Ratings Abolishing Veiled Exchanges.* |
+| **SaleBuilders** | 1997–2012 | Applied development and commercial systems architecture. *Smart-city Adaptive Living Engineering Banishing Untested Infrastructure—Laboratories Delivering Enduring Resilient Systems.* |
+| **ERES Institute** | 2012–Present | Formal independent research. 300+ publications on ResearchGate. International submissions (Hague, DBDM 2026, ISO/ANSI). *Empirical Realtime Education System.* |
 
-ERES MENA 2025 Submission.pdf
-ERES 1000-Year Plan in Chinese Review.pdf
-Becoming_Open_Capacity_Building (Arab World)
-Architectural_Proposal_for_Boundaryless.pdf
-🎯 Key Features (Implementation Goals)
-Progressive Learning Pathways
-javascript
-// Example quest progression
-const learningPath = {
-beginner: [
-"nac_fundamentals_quest", // Use: A Letter from ERES to the World
-"community_introduction", // Use: Building Cybernetic Communities
-"basic_resonance_awareness" // Use: ARI E-Manual basics
-],
-intermediate: [
-"sroc_participation", // Use: GSSG Technical Brief
-"governance_engagement", // Use: AOC PAC documentation
-"economic_integration" // Use: Meritcoin outline
-],
-advanced: [
-"infrastructure_design", // Use: LOGOS frameworks
-"regional_coordination", // Use: Migration Plan Framework
-"planetary_stewardship" // Use: Millennium Synthesis
-]
-};
-Resonance-Based Game Mechanics
-javascript
-// ARI/ERI integration example
-class ResonanceEngine {
-calculateRewardMultiplier(playerARI, communityERI) {
-// Based on formulas in ARI E-Manual V.2
-const baseReward = 100;
-const resonanceFactor = (playerARI + communityERI) / 2;
-return baseReward * (1 + resonanceFactor / 100);
-}
+---
 
-unlockAchievements(resonanceThresholds) {
-// Unlock content based on resonance alignment
-// See: ERES Rating System v2.0.pdf
-}
-}
-EarnedPath Integration
-javascript
-// EP = CPM × WBS + PERT implementation
-class EarnedPathCalculator {
-calculateProgress(player) {
-// Based on: ERES Basics_ Systems Engineering Blueprint.pdf
-const cpm = this.criticalPathMethod(player.skills);
-const wbs = this.workBreakdownCompletion(player.achievements);
-const pert = this.riskAdjustedTimeline(player.consistency);
-return (cpm * wbs) + pert;
-}
-}
-🔌 Integration Guide
-Connecting to NAC Protocols
-SROC Integration:
-javascript
-import { SROCAdapter } from './core/adapters/sroc-adapter';
+## Formal Submissions & Proof-of-Work
 
-// Reference: ERES GSSG Technical Brief.pdf
-const sroc = new SROCAdapter({
-oracleEndpoint: process.env.SROC_ORACLE,
-resonanceWeighting: true
-});
+This archive contributes to a proof-of-work record that includes:
 
-// Gamify SROC participation
-const questReward = await sroc.calculateQuestReward(
-player.ariScore,
-quest.environmentalImpact
-);
-ARI/ERI Integration:
-javascript
-import { ResonanceEngine } from './core/engine/resonance';
+- **The Hague** — ERES-HAGUE-2026-001 (International Court of Justice)
+- **DBDM 2026 (Sydney)** — FAVORS-BERA conference submission
+- **ISO/ANSI** — Standards body submissions
+- **President of the United States** — Formal submission (March 17, 2026)
+- **Government Partnership Brief** — 7 international languages
+- **SSRN** — Keyword sets for ILO, SROC, SCALULAR Engine, SCALULAR Public Record
+- **ResearchGate** — 300+ publications (primary proof-of-work platform)
 
-// Reference: ERES ARI E-Manual V.2.pdf
-const resonance = new ResonanceEngine({
-ariEndpoint: process.env.ARI_API,
-eriEndpoint: process.env.ERI_API
-});
+---
 
-// Use resonance for game balance
-const difficulty = resonance.calculateQuestDifficulty(
-player.ariAlignment,
-community.eriBaseline
-);
-Custom Quest Development
-javascript
-// Example quest definition
-// Based on: Configuring Civilization through PlayNAC.pdf
-const communityGardenQuest = {
-id: "community_garden_v1",
-title: "Create Community Garden",
-difficulty: "intermediate",
-prerequisites: ["basic_ecology", "community_organizing"],
+## SPT Papers: Five Novel Contributions (March 2026)
 
-objectives: [
-{
-type: "learning",
-module: "sustainable_agriculture",
-completion: 100,
-referenceDoc: "ERES Covenant for Cooperative Sustainability.pdf"
-},
-{
-type: "practical",
-action: "garden_establishment",
-verification: "photo_evidence"
-},
-{
-type: "community",
-requirement: "5_participants",
-metric: "collaboration_score"
-}
-],
+The most recent major output documents five novel contributions:
 
-rewards: {
-experience: 500,
-badges: ["green_thumb", "community_builder"],
-resonance: {
-ariBonus: 0.1,
-eriImpact: 0.05
-},
-documentation: [
-"ERES Basics_ Systems Engineering Blueprint.pdf",
-"Bio-Cybernetics Integration Framework.pdf"
-]
-}
-};
-📊 Research Metrics & Documentation Analysis
-Repository Statistics
-Total PDF Documents: 216+
-Total File Size: ~500MB+
-Languages: English (primary), Chinese (translations available)
-Version Tracking: Multiple revisions for key frameworks
-Cross-references: Extensive internal citation network
-Most Referenced Documents
-ERES Core Philosophical Framework.pdf
-ERES ARI E-Manual V.2.pdf
-ERES GSSG Technical Brief.pdf
-ERES LOGOS for Smart-City Community (rev.2).pdf
-ERES CA² Formula V1.4.pdf
-Document Update Frequency
-Monthly updates: Core technical specifications
-Quarterly updates: Strategic frameworks
-Annual updates: Comprehensive reviews
-Continuous: Emergency protocols and responses
-🛠️ Development Roadmap
-Phase 1: Foundation (Complete)
-✅ Core research documentation compilation
-✅ Theoretical framework establishment
-✅ Initial partnership proposals
-✅ Basic technical specifications
-Phase 2: Integration (Current - 2025)
-🔄 Digital quest system development
-🔄 ARI/ERI sensor network prototyping
-🔄 Community pilot program design
-🔄 Documentation digitization and indexing
-📋 Mobile application frameworks
-Phase 3: Ecosystem (2026)
-📋 Full gamification platform launch
-📋 Multi-community deployment
-📋 Advanced analytics dashboard
-📋 AI-assisted personalization
-📋 Cross-platform integration
-Phase 4: Scale (2027+)
-📋 Regional network coordination
-📋 International partnerships
-📋 Academic institution integration
-📋 Enterprise frameworks
-📋 Planetary coordination protocols
-🔐 Research Integrity & Verification
-Document Authentication
-All PDFs include cryptographic hashing
-Version control through Git commits
-Authorship attribution in metadata
-Timestamp verification available
-Peer Review Process
-Multi-disciplinary review teams
-Community feedback integration
-Academic partnership validation
-Iterative revision cycles
-Citation Standards
-All external sources properly attributed
-Cross-referencing within document ecosystem
-Academic citation formats (APA, Chicago)
-Open access preference
-🤝 Community & Support
-Accessing Research Materials
-Primary Repository: GitHub PlayNAC-KERNEL
-Documentation Index: README.md (this file)
-Citation Requests: eresmaestro@gmail.com
-Collaboration Inquiries: GitHub Discussions
-Contributing to Research
-We welcome contributions in:
-Research Analysis - Framework validation and extension
-Documentation - Clarity improvements and translation
-Technical Implementation - Prototype development
-Community Testing - Pilot program participation
-Educational Content - Tutorial and guide creation
-Get Involved
-Academic Partnerships: Research collaborations with universities
-Community Implementation: Pilot programs in local communities
-Technical Development: Open source contributions
-Content Creation: Educational materials and workshops
-📚 Related Repositories
-Proof-of-Work_MD - Markdown documentation and implementation protocols
-Gracechain-Meritcoin - Merit-based economic system
-Support-Documentation - Additional research materials
-NAC_Images - Visual documentation and diagrams
-⚖️ License & Attribution
-CARE Commons Attribution License v2.1 (CCAL)
-This repository and all contained documents are licensed under CCAL v2.1:
-✅ Share — Copy and redistribute in any medium or format
-✅ Adapt — Remix, transform, and build upon the material
-Under these terms:
-📌 Attribution — Credit "Joseph A. Sprute — ERES Institute for New Age Cybernetics"
-🚫 Non-Exploitative — No extractive or harmful commercial use
-🔍 Transparency — Clearly indicate any changes made
-See LICENSE.md for complete terms.
-Citing This Work
-When referencing documents from this repository:
-plaintext
-Sprute, J. A. (2012-2025). [Document Title]. 
-ERES Institute for New Age Cybernetics. 
-Retrieved from https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL
-🙏 Acknowledgments
-Research Collaborations:
-Multiple AI research partners (Grok, ChatGPT, DeepSeek, Perplexity, Claude)
-Academic peer reviewers
-Community pilot program participants
-International research partners
-Document Development:
-13+ years of systematic research
-250+ publications on ResearchGate
-Extensive interdisciplinary synthesis
-Community-driven refinement
-Special Thanks:
-Early adopters and pilot communities
-Academic reviewers and validators
-Translation contributors
-Partnership organizations
-Open source software community
+1. **Semantic Authentication** — Identity verified by meaning, not just credentials
+2. **Proof-of-Resonance** — Value accrual through harmony, not computation
+3. **Energy–Security Dependency** — Security as a function of energy architecture
+4. **Emergency Retransmission** — Fault-tolerant broadcast under system stress
+5. **State-Aware Identity** — Identity that adapts to context without losing continuity
 
-"Making New Age Cybernetics accessible through gamification and interactive learning - transforming civilization-scale change into humanity's greatest adventure."
+**VLSA Principle:** *"If it works in a THOW, it works on a generation ship."*
+**FDRV IS the interstellar vessel at maximum scale.**
 
-[![ERES Institute](https://img.shields.io/badge/ERES-Institute_for_New_Age_Cybernetics-green.svg)](https://github.com/ERES-Institute-for-New-Age-Cybernetics)
-[![PlayNAC](https://img.shields.io/badge/PlayNAC-Gamified_Transformation-purple.svg)](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL)
-[![Research Docs](https://img.shields.io/badge/Documents-216%2B%20PDFs-blue.svg)](https://github.com/ERES-Institute-for-New-Age-Cybernetics/PlayNAC-KERNEL)
+---
+
+## Statistics
+
+| Metric | Value |
+|--------|-------|
+| Commits | 365+ |
+| Documents | 216+ PDFs |
+| Development span | 2012–2026 (13+ years) |
+| Trilogy volumes | 3 theses + master overview |
+| Languages | English + 7 Government Partnership translations |
+| Domains | Economics, governance, data integrity, resonance physics, propulsion, identity, certification, engagement, epistemology |
+
+---
+
+## License
+
+All original ERES materials are published under the **CARE Commons Attribution License v2.1 (CCAL)**.
+
+- **Permitted:** Civic, educational, and research use; open-source derivative works with attribution; free redistribution
+- **Prohibited:** Weaponization; extractive commercial exploitation; closed-source derivatives
+
+**Attribution:**
+```
+Joseph A. Sprute — ERES Institute for New Age Cybernetics
+Source: https://github.com/ERES-Institute-for-New-Age-Cybernetics
+License: CARE Commons Attribution License v2.1 (CCAL)
+```
+
+Third-party reference materials retain their original licensing.
+
+---
+
+## Author
+
+**Joseph Allen Sprute** (ERES Maestro)
+Founder and Director, ERES Institute for New Age Cybernetics
+U.S. Army Veteran — Oregon Army National Guard, 1983–1989, Infantry 11B, Honorable Discharge
+33 Westbury Drive, Bella Vista (Beautiful View), Arkansas 72714
+
+**Co-Author:** SYU JIA WUN (independent researcher, Taiwan) — first cross-Pacific collaboration
+
+| Platform | Link |
+|----------|------|
+| Email | eresmaestro@gmail.com |
+| ResearchGate | [Joseph Sprute](https://www.researchgate.net/profile/Joseph-Sprute/research) |
+| LinkedIn | [joseph-a-sprute](https://www.linkedin.com/in/joseph-a-sprute-1123b0382/) |
+| Medium | [@josephasprute](https://medium.com/@josephasprute) |
+| Threads | [@josephsprute](https://www.threads.com/@josephsprute) |
+| GitHub Discussions | [Community Forum](https://github.com/ERES-Institute-for-New-Age-Cybernetics/Discussions) |
+
+---
+
+> *"We build not for today alone, but for generations to inherit harmony between Earth and civilization."*
+
+---
+
+**Document ID:** ERES-PLAYNAC-KERNEL-README-2026-002
+**Last Updated:** March 28, 2026
+**Classification:** Open / Unrestricted
